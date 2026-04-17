@@ -1,0 +1,27 @@
+---
+description: Asset organization and import hygiene
+globs: src/**/*.{js,jsx}
+alwaysApply: false
+---
+
+# Asset hygiene (logos/icons/images)
+
+- Store icons in `src/assets/icons/*` and images/logos in `src/assets/images/*`.
+- Prefer importing assets via the barrel files:
+  - `src/assets/icons/index.js`
+  - `src/assets/images/index.js`
+- Avoid ad-hoc string paths to assets from JSX when a module import works.
+
+## Repo references (examples)
+- Logos: `src/assets/images/header-logo.svg` (barrel: `headerLogo`)
+- Nav logo usage: `src/components/Nav.jsx`
+- Social icons data: `src/constants/index.js` (`footerSocialLinks`)
+
+## Filenames and diffs
+- Prefer keeping existing filenames if it reduces changes (swap the file contents instead).
+- If filenames must change, update barrel exports and all imports consistently.
+
+## Reporting
+Include an **Assets** section in the summary:
+- added/removed/renamed files
+- where each asset is used (section/component)

@@ -1,0 +1,18 @@
+---
+description: Precaution: avoid layout/architecture refactors in src
+globs: src/**/*.{js,jsx}
+alwaysApply: false
+---
+
+# Precaution: keep template layout intact
+
+When editing files under `src/`:
+
+- Do not refactor component structure, section composition, or responsiveness.
+- Do not change section order in `src/App.jsx` unless explicitly requested.
+- Do not rewrite Tailwind layout class intent (`flex/grid` + breakpoints like `max-lg`, `max-xl`, `sm`, `wide`) or shared utilities (`padding*`, `max-container`).
+
+Allowed changes are limited to rebrand surfaces:
+- copy/links/data (often `src/constants/index.js`)
+- images/icons/logos (`src/assets/*`)
+- safe token-level changes (`tailwind.config.js`) that preserve class usage patterns

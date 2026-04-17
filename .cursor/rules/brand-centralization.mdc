@@ -1,0 +1,27 @@
+---
+description: Keep branding content centralized and reusable
+alwaysApply: true
+---
+
+# Centralize brand config and copy
+
+Treat this repo as a rebrandable template.
+
+- Prefer putting brand copy and data in `src/constants/index.js` (or a single brand config module) rather than hardcoding strings across many sections.
+- Sections in `src/sections/*` should reference constants/config for:
+  - brand/project name
+  - hero headline/subtext
+  - CTAs (button labels)
+  - support email/phone
+  - footer blurb + link groups
+
+## Repo references (examples)
+- Primary data hub: `src/constants/index.js` (nav links, products, footer links, social icons)
+- Nav consumes constants: `src/components/Nav.jsx`
+- Sections with brand copy to prefer centralizing:
+  - `src/sections/Hero.jsx`
+  - `src/sections/Footer.jsx`
+
+## When hardcoding is acceptable
+- Only for short, purely presentational strings that are unlikely to change across brands.
+- If you do hardcode, ensure it contains **no old brand references**.

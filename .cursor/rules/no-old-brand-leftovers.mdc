@@ -1,0 +1,26 @@
+---
+description: Prevent leftover old-brand references during rebrands
+alwaysApply: true
+---
+
+# No leftover old-brand strings
+
+When performing a rebrand, ensure there are **zero** leftover mentions of the previous brand.
+
+## Requirements
+- Search for the old brand name and replace/update all occurrences.
+- Also check for common “near matches”:
+  - old support emails/domains (e.g. `@oldbrand.com`)
+  - product names, testimonials, footer blurb
+  - document title/favicon alt text
+
+## Repo references (examples)
+- Document title + favicon: `index.html`
+- Central copy/data: `src/constants/index.js`
+- Common sections with brand mentions: `src/sections/Hero.jsx`, `src/sections/Footer.jsx`
+
+## Reporting
+In the summary, include a short **Leftovers check** section:
+- old-brand search terms used
+- files changed (high-level)
+- any intentional exceptions (rare; must be explicit)

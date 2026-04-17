@@ -1,0 +1,17 @@
+---
+description: Figma-to-code reuse-first checklist (minimize diffs)
+alwaysApply: true
+---
+
+# Figma-to-code: reuse-first checklist
+
+When translating a Figma design into this repo:
+
+- First map each Figma section to an existing file in `src/sections/*` (prefer editing vs creating new sections).
+- Prefer reusing existing components from `src/components/*` before creating new ones.
+- If creating a new component is unavoidable, keep it narrowly scoped and reusable.
+- Do not introduce a new layout system; preserve existing Tailwind breakpoint patterns and spacing utilities.
+
+## Required callouts in your write-up
+- **Reuse** vs **Create** list for components (with paths)
+- any new assets required (type + filename + where used)

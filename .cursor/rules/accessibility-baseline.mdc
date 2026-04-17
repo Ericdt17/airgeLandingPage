@@ -1,0 +1,18 @@
+---
+description: Baseline accessibility requirements for UI changes
+globs: src/**/*.{js,jsx}
+alwaysApply: false
+---
+
+# Accessibility baseline
+
+When changing UI copy, assets, or components:
+
+- Ensure meaningful `alt` text for non-decorative images (especially logos and hero/product images).
+- If an image is decorative, use an empty alt (`alt=""`) and avoid redundant screen-reader noise.
+- Keep CTA/button/link text descriptive; avoid “Click here”.
+- Do not remove focus-visible affordances or create keyboard traps.
+
+## Repo references (examples)
+- Logo image alt text: `src/components/Nav.jsx`
+- Hero imagery: `src/sections/Hero.jsx`

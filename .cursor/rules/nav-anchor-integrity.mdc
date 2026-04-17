@@ -1,0 +1,23 @@
+---
+description: Keep nav links and section anchors consistent
+globs: src/**/*.{js,jsx}
+alwaysApply: false
+---
+
+# Navigation + anchor integrity
+
+Whenever editing navigation (`navLinks`) or section `id`s:
+
+- Ensure each `navLinks[].href` (e.g. `#probleme`) matches a section `id` in `src/sections/*` (or intentional duplicate hrefs for two labels targeting the same block).
+- Do not introduce duplicate `id` attributes on different elements.
+- If you rename an anchor, update **both** the nav link and the target section `id`.
+
+## Repo references
+
+- Nav links: `src/constants/index.js` (`navLinks`)
+- Nav UI: `src/components/Nav.jsx`
+- Section ids (examples — verify in files): `home`, `demarrer`, `probleme`, `solution`, `fonctionnalites` (Sécurité & confiance), `impact`, `trusted-by`, `temoignages`, `tarifs`, `faq`, `cta-final`, footer is not typically anchored from nav
+
+## Reporting
+
+In the summary, list anchors updated and the sections they map to.

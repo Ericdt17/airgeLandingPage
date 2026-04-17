@@ -1,0 +1,19 @@
+---
+description: Change brand look via Tailwind tokens, not ad-hoc styles
+alwaysApply: true
+---
+
+# Token-only theming
+
+To preserve the template style system:
+
+- Prefer changing brand look by adjusting tokens in `tailwind.config.js` (colors/fonts/backgroundImage).
+- Avoid introducing new one-off hex colors, custom inline styles, or new CSS rules for theming.
+
+## Repo references (examples)
+- Theme tokens: `tailwind.config.js` (e.g. `colors.coral-red`, `colors.slate-gray`)
+- Shared layout utilities: `src/index.css` (`padding*`, `max-container`, `info-text`)
+
+## Token stability
+- Keep existing token names stable (e.g. `coral-red`, `slate-gray`) unless explicitly requested.
+- If a rename is required, do it as a single coordinated change and update all usages.

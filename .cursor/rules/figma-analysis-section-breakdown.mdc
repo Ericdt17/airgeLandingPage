@@ -1,0 +1,62 @@
+---
+description: When using Figma MCP, output section/component/asset breakdown
+alwaysApply: true
+---
+
+# Figma MCP analysis output contract
+
+Whenever analyzing a page or section using the Figma MCP, produce a **markdown breakdown** that is implementation-ready.
+
+## Required output (always)
+
+### Sections concerned
+- List the landing-page sections affected (map to `src/sections/*` where possible).
+- For each section, include the target anchor `id` (e.g. `#home`) if applicable.
+
+### Components needed
+For each section, list:
+- **Reuse**: existing components to reuse from `src/components/*` (name + file path).
+- **Create**: new components required (proposed name + target path in `src/components/*`).
+- **Props**: key props/data shape needed (brief, bullet list).
+
+### Assets required
+List required assets with:
+- **Type**: logo / icon / illustration / photo / background / svg
+- **Target location**: `src/assets/images/*` or `src/assets/icons/*`
+- **Filename**: recommended filename (prefer keeping existing filenames if it minimizes diffs)
+- **Usage**: where it is used (section/component)
+
+### Icons required (must be explicit)
+If the design uses icons, include a dedicated **Icons required** list (even if icons are also mentioned above).
+
+For each icon, include:
+- **Purpose**: what it represents (e.g. "menu", "close", "check", "shipping", "facebook")
+- **Proposed filename**: kebab-case svg name (e.g. `menu.svg`, `close.svg`, `check-circle.svg`)
+- **Target location**: `src/assets/icons/`
+- **Where used**: section/component + UI location (e.g. `Nav` mobile menu button)
+- **Source**: Figma node name (or closest label) so it’s easy to export the right asset
+- **Export spec**: recommended artboard size + style (e.g. `24x24 outline stroke-2`, or `24x24 solid`)
+
+Icon naming conventions:
+- Prefer **kebab-case** and descriptive names.
+- Avoid brand names in filenames unless the icon is a brand logo (e.g. `facebook.svg` is fine).
+- If multiple variants exist, suffix with variant (e.g. `chevron-left.svg`, `chevron-left-solid.svg`, `chevron-left-sm.svg`).
+
+Icon sizing conventions (default unless specified by the design system):
+- Design on a **24x24** artboard.
+- Keep ~**2px padding** so strokes/shapes don’t touch the edges.
+- Outline icons: prefer **2px stroke** (consistent caps/joins).
+- Ensure the icon remains legible at **16px** and **24px**.
+
+## Repo references
+- Icon export/design guide: `ICONS_CANVA_GUIDE.md`
+- Icons live in: `src/assets/icons/` (exported via `src/assets/icons/index.js`)
+
+### Tokens & styles
+- Identify any needed **Tailwind theme token** updates (colors, fonts) in `tailwind.config.js`.
+- Call out any layout constraints that must remain unchanged (breakpoints, spacing utilities).
+
+## Guardrails
+- Prefer reusing existing section/component patterns over inventing new layout systems.
+- If a Figma element maps cleanly to an existing component, explicitly say “**Reuse**” rather than “Create”.
+- Keep output concise and actionable; no vague “update styling” statements without specifying what/where.
