@@ -4,14 +4,283 @@ import {
     ecosystemClient,
     ecosystemDriver,
 } from "../assets/images";
+import {
+    legalConditionsPath,
+    termsContactIntro,
+    termsGroups,
+    termsPageIntro,
+    termsPageTitle,
+    termsPageUpdated,
+} from "./conditions";
+import {
+    legalSecurityPath,
+    securityAgencyAddress,
+    securityAgencyPhone,
+    securityContactIntro,
+    securityGroups,
+    securityPageIntro,
+    securityPageTitle,
+    securityPageUpdated,
+} from "./security";
+import {
+    cookieBrowserHints,
+    cookieGroups,
+    cookieRecapColumnLabels,
+    cookieRecapRows,
+    cookiesContactIntro,
+    cookiesPageIntro,
+    cookiesPageTitle,
+    cookiesPageUpdated,
+    legalCookiesPath,
+} from "./cookies";
+import {
+    aboutContactAddress,
+    aboutContactHours,
+    aboutContactLabels,
+    aboutContactTitle,
+    aboutDifferentiators,
+    aboutDifferentiatorsTitle,
+    aboutIntroParagraphs,
+    aboutLegalLine,
+    aboutPageTagline,
+    aboutPageTitle,
+    aboutStats,
+    aboutStoryParagraphs,
+    aboutStoryTitle,
+    entrepriseAProposPath,
+} from "./about";
+import {
+    plateformeSolutionClientPath,
+    solutionClientCtaBody,
+    solutionClientCtaTitle,
+    solutionClientFeatures,
+    solutionClientFeaturesTitle,
+    solutionClientHowTitle,
+    solutionClientIntroParagraphs,
+    solutionClientPageTagline,
+    solutionClientPageTitle,
+    solutionClientPricingBody,
+    solutionClientPricingTitle,
+    solutionClientSteps,
+    solutionClientStores,
+    solutionClientStoresTitle,
+} from "./solutionClient";
+import {
+    plateformePortailAgentPath,
+    portailAgentClosingParagraphs,
+    portailAgentForYouItems,
+    portailAgentForYouTitle,
+    portailAgentIntroParagraphs,
+    portailAgentNeverItems,
+    portailAgentNeverTitle,
+    portailAgentPageTagline,
+    portailAgentPageTitle,
+    portailAgentStats,
+} from "./portailAgent";
+import {
+    plateformePortailLivreurPath,
+    portailLivreurAppSectionTitle,
+    portailLivreurFeatures,
+    portailLivreurImpactItems,
+    portailLivreurImpactTitle,
+    portailLivreurIntroParagraphs,
+    portailLivreurLeadParagraph,
+    portailLivreurLeadQuote,
+    portailLivreurPageTagline,
+    portailLivreurPageTitle,
+    portailLivreurStats,
+} from "./portailLivreur";
+import {
+    integrationsApiAudienceItems,
+    integrationsApiAudienceTitle,
+    integrationsApiBadge,
+    integrationsApiCodeSample,
+    integrationsApiCodeTitle,
+    integrationsApiFeatures,
+    integrationsApiFeaturesTitle,
+    integrationsApiIntroParagraphs,
+    integrationsApiPageTagline,
+    integrationsApiPageTitle,
+    integrationsApiVersionLabel,
+    integrationsApiWaitlistBody,
+    integrationsApiWaitlistButtonLabel,
+    integrationsApiWaitlistTitle,
+    plateformeIntegrationsApiPath,
+} from "./integrationsApi";
+import {
+    contactChannelsSectionTitle,
+    contactCtaBody,
+    contactCtaTitle,
+    contactEmailChannel,
+    contactIntroParagraphs,
+    contactPageTagline,
+    contactPageTitle,
+    contactPhoneChannel,
+    contactPhoneFallbackLine,
+    contactPracticalAddress,
+    contactPracticalCompany,
+    contactPracticalLabelAddress,
+    contactPracticalLabelCompany,
+    contactPracticalLabelHours,
+    contactPracticalLabelSunday,
+    contactPracticalSunday,
+    contactPracticalTitle,
+    contactPracticalWeekHours,
+    contactReasonsItems,
+    contactReasonsTitle,
+    contactResponsibleLine,
+    contactResponsibleTitle,
+    contactVisitChannel,
+    contactWhatsAppChannel,
+    entrepriseContactPath,
+} from "./contact";
+
+export {
+    legalConditionsPath,
+    termsContactIntro,
+    termsGroups,
+    termsPageIntro,
+    termsPageTitle,
+    termsPageUpdated,
+};
+
+export {
+    legalSecurityPath,
+    securityAgencyAddress,
+    securityAgencyPhone,
+    securityContactIntro,
+    securityGroups,
+    securityPageIntro,
+    securityPageTitle,
+    securityPageUpdated,
+};
+
+export {
+    cookieBrowserHints,
+    cookieGroups,
+    cookieRecapColumnLabels,
+    cookieRecapRows,
+    cookiesContactIntro,
+    cookiesPageIntro,
+    cookiesPageTitle,
+    cookiesPageUpdated,
+    legalCookiesPath,
+};
+
+export {
+    aboutContactAddress,
+    aboutContactHours,
+    aboutContactLabels,
+    aboutContactTitle,
+    aboutDifferentiators,
+    aboutDifferentiatorsTitle,
+    aboutIntroParagraphs,
+    aboutLegalLine,
+    aboutPageTagline,
+    aboutPageTitle,
+    aboutStats,
+    aboutStoryParagraphs,
+    aboutStoryTitle,
+    entrepriseAProposPath,
+};
+
+export {
+    plateformeSolutionClientPath,
+    solutionClientCtaBody,
+    solutionClientCtaTitle,
+    solutionClientFeatures,
+    solutionClientFeaturesTitle,
+    solutionClientHowTitle,
+    solutionClientIntroParagraphs,
+    solutionClientPageTagline,
+    solutionClientPageTitle,
+    solutionClientPricingBody,
+    solutionClientPricingTitle,
+    solutionClientSteps,
+    solutionClientStores,
+    solutionClientStoresTitle,
+};
+
+export {
+    plateformePortailAgentPath,
+    portailAgentClosingParagraphs,
+    portailAgentForYouItems,
+    portailAgentForYouTitle,
+    portailAgentIntroParagraphs,
+    portailAgentNeverItems,
+    portailAgentNeverTitle,
+    portailAgentPageTagline,
+    portailAgentPageTitle,
+    portailAgentStats,
+};
+
+export {
+    plateformePortailLivreurPath,
+    portailLivreurAppSectionTitle,
+    portailLivreurFeatures,
+    portailLivreurImpactItems,
+    portailLivreurImpactTitle,
+    portailLivreurIntroParagraphs,
+    portailLivreurLeadParagraph,
+    portailLivreurLeadQuote,
+    portailLivreurPageTagline,
+    portailLivreurPageTitle,
+    portailLivreurStats,
+};
+
+export {
+    integrationsApiAudienceItems,
+    integrationsApiAudienceTitle,
+    integrationsApiBadge,
+    integrationsApiCodeSample,
+    integrationsApiCodeTitle,
+    integrationsApiFeatures,
+    integrationsApiFeaturesTitle,
+    integrationsApiIntroParagraphs,
+    integrationsApiPageTagline,
+    integrationsApiPageTitle,
+    integrationsApiVersionLabel,
+    integrationsApiWaitlistBody,
+    integrationsApiWaitlistButtonLabel,
+    integrationsApiWaitlistTitle,
+    plateformeIntegrationsApiPath,
+};
+
+export {
+    contactChannelsSectionTitle,
+    contactCtaBody,
+    contactCtaTitle,
+    contactEmailChannel,
+    contactIntroParagraphs,
+    contactPageTagline,
+    contactPageTitle,
+    contactPhoneChannel,
+    contactPhoneFallbackLine,
+    contactPracticalAddress,
+    contactPracticalCompany,
+    contactPracticalLabelAddress,
+    contactPracticalLabelCompany,
+    contactPracticalLabelHours,
+    contactPracticalLabelSunday,
+    contactPracticalSunday,
+    contactPracticalTitle,
+    contactPracticalWeekHours,
+    contactReasonsItems,
+    contactReasonsTitle,
+    contactResponsibleLine,
+    contactResponsibleTitle,
+    contactVisitChannel,
+    contactWhatsAppChannel,
+    entrepriseContactPath,
+};
 
 export const navLinks = [
-    { href: "#probleme", label: "Problème" },
-    { href: "#solution", label: "Notre Solution" },
-    { href: "#fonctionnalites", label: "Comment ça marche" },
-    { href: "#impact", label: "Avantages" },
-    { href: "#tarifs", label: "Tarifs" },
-    { href: "#faq", label: "FAQ" },
+    { href: "/#probleme", label: "Problème" },
+    { href: "/#solution", label: "Notre Solution" },
+    { href: "/#fonctionnalites", label: "Comment ça marche" },
+    { href: "/#impact", label: "Avantages" },
+    { href: "/#tarifs", label: "Tarifs" },
+    { href: "/#faq", label: "FAQ" },
 ];
 
 export const navCtaLabel = "Démarrer";
@@ -21,6 +290,28 @@ export const navMobileMenuCloseLabel = "Fermer le menu";
 
 /** Point d’entrée WhatsApp unique pour tous les CTA marketing */
 export const whatsappCtaHref = "https://wa.link/zc5ijs";
+
+/** Route SPA — politique de confidentialité */
+export const legalConfidentialitePath = "/legal/confidentialite";
+
+/** Liens légaux gérés par React Router (pas de rechargement complet) */
+export const legalSpaPaths = [
+    legalConfidentialitePath,
+    legalConditionsPath,
+    legalSecurityPath,
+    legalCookiesPath,
+];
+
+/** Liens footer gérés par React Router (légal + pages entreprise déclarées) */
+export const footerSpaPaths = [
+    ...legalSpaPaths,
+    entrepriseAProposPath,
+    plateformeSolutionClientPath,
+    plateformePortailAgentPath,
+    plateformePortailLivreurPath,
+    plateformeIntegrationsApiPath,
+    entrepriseContactPath,
+];
 
 export const trustedByEyebrow = "Partenaires de confiance au Cameroun";
 
@@ -440,28 +731,28 @@ export const footerColumns = [
     {
         title: "Plateforme",
         links: [
-            { label: "Solution Client", href: "/plateforme/solution-client" },
-            { label: "Portail Agent", href: "/plateforme/portail-agent" },
-            { label: "App Chauffeur", href: "/plateforme/app-chauffeur" },
-            { label: "Intégrations API", href: "/plateforme/integrations-api" },
+            { label: "Solution Client", href: plateformeSolutionClientPath },
+            { label: "Portail Agent", href: plateformePortailAgentPath },
+            { label: "Portail livreur", href: plateformePortailLivreurPath },
+            { label: "Intégrations API", href: plateformeIntegrationsApiPath },
         ],
     },
     {
         title: "Entreprise",
         links: [
-            { label: "À Propos", href: "/entreprise/a-propos" },
+            { label: "À Propos", href: entrepriseAProposPath },
             { label: "Blog", href: "/entreprise/blog" },
             { label: "Recrutement", href: "/entreprise/recrutement" },
-            { label: "Contact", href: "/entreprise/contact" },
+            { label: "Contact", href: entrepriseContactPath },
         ],
     },
     {
         title: "Légal",
         links: [
-            { label: "Confidentialité", href: "/legal/confidentialite" },
-            { label: "Conditions", href: "/legal/conditions" },
-            { label: "Sécurité", href: "/legal/securite" },
-            { label: "Cookies", href: "/legal/cookies" },
+            { label: "Confidentialité", href: legalConfidentialitePath },
+            { label: "Conditions", href: legalConditionsPath },
+            { label: "Sécurité", href: legalSecurityPath },
+            { label: "Cookies", href: legalCookiesPath },
         ],
     },
 ];
@@ -490,4 +781,106 @@ export const footerLocales = [
     { code: "fr", label: "FR", href: "/", active: true },
     { code: "en", label: "EN", href: "/en/", active: false },
     { code: "es", label: "ES", href: "/es/", active: false },
+];
+
+/** Titre — politique de confidentialité (page `/legal/confidentialite`). */
+export const footerPrivacyHeading = "Confidentialité";
+
+export const footerSupportEmail = "contact@livsight.com";
+
+export const footerPrivacyItems = [
+    {
+        title: "Données collectées",
+        body: "Nom, numéro de téléphone, adresse de livraison",
+    },
+    {
+        title: "Usage",
+        body: "Uniquement pour traiter et suivre votre commande",
+    },
+    {
+        title: "Partage",
+        body: "Partagées avec le livreur assigné uniquement",
+    },
+    {
+        title: "Conservation",
+        body: "Données conservées le temps nécessaire au traitement",
+    },
+];
+
+export const footerPrivacyContactLead = "Pour toute demande :";
+
+export const footerPrivacyContactConnector = " ou ";
+
+export const footerPrivacyWhatsAppLabel = "WhatsApp";
+
+/** Politique de confidentialité — page dédiée */
+export const privacyPageTitle = "Politique de Confidentialité";
+
+export const privacyPageUpdated = "Dernière mise à jour : avril 2026";
+
+export const privacyPageIntro =
+    "Chez LivSight, la confiance de nos clients est notre priorité. Cette politique explique clairement quelles données nous collectons, pourquoi, et comment nous les protégeons. Nous nous engageons à ne jamais vendre ni exploiter vos données à des fins commerciales.";
+
+export const privacySections = [
+    {
+        number: "01",
+        title: "Données que nous collectons",
+        body: "Lors de l'utilisation de nos services, nous collectons uniquement les informations nécessaires au bon déroulement de votre livraison :",
+        items: [
+            "Nom et prénom de l'expéditeur et du destinataire",
+            "Numéro de téléphone (WhatsApp ou appel)",
+            "Adresse de collecte et adresse de livraison",
+            "Contenu des échanges WhatsApp liés à la commande",
+            "Informations sur l'appareil (type, système d'exploitation) pour l'application",
+        ],
+    },
+    {
+        number: "02",
+        title: "Comment nous utilisons vos données",
+        body: "Vos données sont utilisées exclusivement pour :",
+        items: [
+            "Traiter et coordonner votre livraison de bout en bout",
+            "Vous envoyer des notifications de statut (confirmation, en route, livré)",
+            "Résoudre d'éventuels litiges ou incidents de livraison",
+            "Améliorer la qualité et la fiabilité de notre service",
+        ],
+    },
+    {
+        number: "03",
+        title: "Partage de vos données",
+        body: "Nous ne vendons jamais vos données. Elles peuvent être partagées uniquement dans les cas suivants :",
+        items: [
+            "Avec le livreur assigné à votre commande (nom, adresse, téléphone)",
+            "Avec nos prestataires techniques hébergeant l'infrastructure (sous accord de confidentialité strict)",
+            "Sur injonction légale d'une autorité compétente camerounaise",
+        ],
+    },
+    {
+        number: "04",
+        title: "Conservation des données",
+        body: "Nous appliquons une politique de conservation minimale :",
+        items: [
+            "Données de commande : conservées 12 mois après la livraison pour gestion des litiges",
+            "Historique des échanges WhatsApp : 6 mois",
+            "Données de compte : jusqu'à la résiliation de votre contrat, puis supprimées sous 30 jours",
+        ],
+    },
+    {
+        number: "05",
+        title: "Vos droits",
+        body: "Vous disposez à tout moment des droits suivants sur vos données personnelles :",
+        items: [
+            "Droit d'accès : obtenir une copie de vos données",
+            "Droit de rectification : corriger des informations inexactes",
+            "Droit à l'effacement : demander la suppression de vos données",
+            "Droit d'opposition : refuser certains traitements",
+            "Pour exercer ces droits, contactez-nous via email ou WhatsApp",
+        ],
+    },
+    {
+        number: "06",
+        title: "Modifications de cette politique",
+        body: "Nous pouvons mettre à jour cette politique pour refléter des évolutions légales ou techniques. En cas de modification importante, nous vous informerons par WhatsApp ou email. La date de dernière mise à jour est toujours indiquée en haut de cette page.",
+        items: [],
+    },
 ];

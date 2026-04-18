@@ -1,0 +1,53 @@
+import { Nav } from "../components";
+import {
+  CtaFinal,
+  Faq,
+  Footer,
+  Hero,
+  LeProbleme,
+  MetriquesCles,
+  Promotion,
+  SecuriteConfiance,
+  Solution,
+  Tarifs,
+  TrustedBy,
+} from "../sections";
+
+const Landing = () => {
+  return (
+    <>
+      <Nav />
+      <main className='relative overflow-hidden bg-white'>
+        <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.12]' aria-hidden='true' />
+        <div className='relative'>
+          <div className='xl:padding-l wide:padding-r padding-b'>
+            <Hero />
+          </div>
+          <TrustedBy />
+          <div className='padding'>
+            <LeProbleme />
+          </div>
+          <div className='padding'>
+            <Solution />
+          </div>
+          <SecuriteConfiance />
+          <MetriquesCles />
+          <Promotion />
+          <Tarifs />
+          <Faq />
+          <div className='padding-x sm:py-16 py-12 w-full'>
+            <CtaFinal />
+          </div>
+        </div>
+      </main>
+      <div className='relative overflow-hidden border-t border-gray-100 bg-white padding-x padding-t pb-8'>
+        <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.15]' aria-hidden='true' />
+        <div className='relative'>
+          <Footer />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Landing;

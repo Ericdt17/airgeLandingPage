@@ -9,6 +9,7 @@ import {
   whatsappCtaHref,
 } from "../constants";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ const Nav = () => {
   return (
     <header className='sticky top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-md'>
       <nav className='flex justify-between items-center max-container px-4 sm:px-16 h-20'>
-        <a href='/'>
+        <Link to='/'>
           <img
             src={headerLogo}
             alt='LivSight'
@@ -39,17 +40,17 @@ const Nav = () => {
             height={72}
             className='m-0 w-[120px] sm:w-[160px] md:w-[200px] h-full max-h-10 sm:max-h-12 md:max-h-14 object-contain'
           />
-        </a>
+        </Link>
 
         <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
           {navLinks.map((item) => (
             <li key={item.label}>
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className='inline-flex items-center gap-2 font-montserrat leading-normal text-sm text-slate-gray hover:text-black transition-colors'
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -89,13 +90,13 @@ const Nav = () => {
               <ul className='flex flex-col gap-4'>
                 {navLinks.map((item) => (
                   <li key={item.label}>
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className='inline-flex items-center gap-2 font-montserrat text-base text-slate-gray hover:text-black transition-colors'
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
