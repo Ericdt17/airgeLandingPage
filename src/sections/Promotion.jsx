@@ -1,10 +1,10 @@
 import {
-  ArrowRightIcon,
   ArchiveBoxIcon,
   CheckBadgeIcon,
   TruckIcon,
   CreditCardIcon,
 } from "@heroicons/react/24/outline";
+import { WhatsAppIcon } from "../components";
 import {
   promoBadge,
   promoHeadlineEmphasis,
@@ -15,8 +15,8 @@ import {
   promoSubheading,
   promoCtaLabel,
   promoFootnotes,
+  whatsappCtaHref,
 } from "../constants";
-import { useModal } from "../context/ModalContext";
 
 const OfferCard = ({ icon, kicker, headline }) => {
   const Icon = icon;
@@ -38,8 +38,6 @@ const OfferCard = ({ icon, kicker, headline }) => {
 };
 
 const Promotion = () => {
-  const { open } = useModal();
-
   return (
     <section className='relative overflow-hidden scroll-mt-24'>
       <div className='relative max-container padding-x py-16 sm:py-20 lg:py-24'>
@@ -80,14 +78,15 @@ const Promotion = () => {
             </p>
 
             <div className='mt-10 flex justify-center'>
-              <button
-                type='button'
-                onClick={open}
+              <a
+                href={whatsappCtaHref}
+                target='_blank'
+                rel='noopener noreferrer'
                 className='inline-flex min-h-[64px] items-center justify-center gap-3 rounded-full bg-white px-10 font-montserrat text-lg font-extrabold text-brand-blue shadow-3xl transition-opacity hover:opacity-95'
               >
+                <WhatsAppIcon className='h-5 w-5 shrink-0' />
                 {promoCtaLabel}
-                <ArrowRightIcon className='h-5 w-5' aria-hidden='true' />
-              </button>
+              </a>
             </div>
 
             <div className='mt-6 flex flex-col items-center justify-center gap-3 text-white/70 sm:flex-row sm:gap-8'>

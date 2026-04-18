@@ -1,4 +1,4 @@
-import { instagram, twitter } from "../assets/icons";
+import { facebook, instagram } from "../assets/icons";
 import {
     ecosystemAgent,
     ecosystemClient,
@@ -18,6 +18,9 @@ export const navCtaLabel = "Démarrer";
 
 export const navMobileMenuOpenLabel = "Ouvrir le menu";
 export const navMobileMenuCloseLabel = "Fermer le menu";
+
+/** Point d’entrée WhatsApp unique pour tous les CTA marketing */
+export const whatsappCtaHref = "https://wa.link/zc5ijs";
 
 export const trustedByEyebrow = "Partenaires de confiance au Cameroun";
 
@@ -43,7 +46,7 @@ export const heroSubheadline =
     "Envoyez vos commandes sur WhatsApp, nous nous occupons du reste avec un suivi clair et professionnel.";
 
 export const heroCtaPrimaryLabel = "Écrire sur WhatsApp";
-export const heroCtaPrimaryHref = "https://wa.me/";
+export const heroCtaPrimaryHref = whatsappCtaHref;
 
 export const heroCtaSecondaryLabel = "Tester gratuitement";
 
@@ -294,8 +297,7 @@ export const tarifsCtaPrimary = "Démarrer avec LivSight";
 
 export const tarifsCtaSecondary = "Contacter un expert";
 
-/** Lien « Contacter un expert » — à ajuster au mail LivSight réel */
-export const tarifsCtaSecondaryHref = "mailto:contact@livsight.com";
+export const tarifsCtaSecondaryHref = whatsappCtaHref;
 
 export const pricingHeadline = "Tarifs simples & transparents";
 
@@ -390,10 +392,11 @@ export const ctaFinalSubheading =
 
 export const ctaFinalPrimaryLabel = "Essayer Gratuitement";
 
+export const ctaFinalPrimaryHref = whatsappCtaHref;
+
 export const ctaFinalSecondaryLabel = "Parler à un Agent";
 
-/** Même contact que l’offre Tarifs — centraliser ici pour le CTA final */
-export const ctaFinalSecondaryHref = "mailto:contact@livsight.com";
+export const ctaFinalSecondaryHref = whatsappCtaHref;
 
 export const partnerTestimonials = [
     {
@@ -468,12 +471,12 @@ export const footerColumns = [
  */
 export const footerSocialLinks = [
     {
-        href: "https://twitter.com/",
-        label: "LivSight sur X",
-        icon: twitter,
+        href: "https://www.facebook.com/share/1J4aQ42T2t/?mibextid=wwXIfr",
+        label: "LivSight sur Facebook",
+        icon: facebook,
     },
     {
-        href: "https://www.instagram.com/",
+        href: "https://www.instagram.com/livsight7?igsh=eHkyMjQyZWVkeGc4&utm_source=qr",
         label: "LivSight sur Instagram",
         icon: instagram,
     },

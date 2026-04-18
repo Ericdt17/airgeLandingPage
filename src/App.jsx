@@ -1,5 +1,4 @@
-import { ComingSoonModal, Nav } from "./components";
-import { ModalProvider } from "./context/ModalContext";
+import { Nav } from "./components";
 import {
   CtaFinal,
   Faq,
@@ -16,8 +15,7 @@ import {
 
 const App = () => {
   return (
-    <ModalProvider>
-      <ComingSoonModal />
+    <>
       <Nav />
       <main className='relative overflow-hidden bg-white'>
         <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.12]' aria-hidden='true' />
@@ -48,7 +46,7 @@ const App = () => {
           <Footer />
         </div>
       </div>
-    </ModalProvider>
+    </>
   );
 };
 

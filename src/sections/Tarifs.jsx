@@ -1,5 +1,6 @@
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
-import { pricingHeadline, pricingPlans } from "../constants";
+import { WhatsAppIcon } from "../components";
+import { pricingHeadline, pricingPlans, whatsappCtaHref } from "../constants";
 
 const Price = ({ price, currency, featured }) => (
   <div className='mt-4 flex items-end gap-1'>
@@ -64,11 +65,12 @@ const Tarifs = () => {
 
         <div className='mt-10 flex justify-center'>
           <a
-            href='https://wa.me/'
+            href={whatsappCtaHref}
             target='_blank'
             rel='noopener noreferrer'
             className='flex items-center justify-center gap-2 rounded-full bg-brand-blue px-8 py-4 font-montserrat text-lg font-bold leading-none text-white transition-colors hover:bg-brand-blue/90'
           >
+            <WhatsAppIcon className='h-5 w-5 shrink-0' />
             Savoir plus sur nos tarifs
           </a>
         </div>

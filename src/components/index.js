@@ -1,9 +1,9 @@
 import Button from "./Button";
-import ComingSoonModal from "./ComingSoonModal";
 import Nav from "./Nav";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 export {
     Button,
-    ComingSoonModal,
     Nav,
+    WhatsAppIcon,
 };

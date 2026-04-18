@@ -1,6 +1,4 @@
-import { Button } from "../components";
-import { useModal } from "../context/ModalContext";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { Button, WhatsAppIcon } from "../components";
 import {
   heroBadge,
   heroCtaPrimaryHref,
@@ -9,10 +7,10 @@ import {
   heroHeadlineEmphasis,
   heroHeadlineLines,
   heroSubheadline,
+  whatsappCtaHref,
 } from "../constants";
 
 const Hero = () => {
-  const { open } = useModal();
 
   return (
     <section
@@ -60,19 +58,21 @@ const Hero = () => {
               borderColor='border-brand-blue'
               fullWidth
               href={heroCtaPrimaryHref}
+              showWhatsAppIcon
               iconWrapperClassName='ml-1 inline-flex items-center justify-center'
               iconAlt=''
               iconURL={undefined}
             />
 
-            <button
-              type='button'
-              onClick={open}
+            <a
+              href={whatsappCtaHref}
+              target='_blank'
+              rel='noopener noreferrer'
               className='flex justify-center items-center gap-2 px-7 py-4 border rounded-full w-full sm:w-auto font-montserrat text-lg leading-none bg-white text-brand-blue border-gray-200 hover:bg-black/5 transition-colors'
             >
+              <WhatsAppIcon className='h-5 w-5 shrink-0' />
               {heroCtaSecondaryLabel}
-              <ArrowRightIcon className='w-5 h-5' aria-hidden='true' />
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -1,15 +1,14 @@
+import { WhatsAppIcon } from "../components";
 import {
+  ctaFinalPrimaryHref,
   ctaFinalPrimaryLabel,
   ctaFinalSecondaryHref,
   ctaFinalSecondaryLabel,
   ctaFinalHeading,
   ctaFinalSubheading,
 } from "../constants";
-import { useModal } from "../context/ModalContext";
 
 const CtaFinal = () => {
-  const { open } = useModal();
-
   return (
     <section
       id='cta-final'
@@ -29,17 +28,22 @@ const CtaFinal = () => {
               {ctaFinalSubheading}
             </p>
             <div className='mt-8 sm:mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:flex-wrap sm:gap-4'>
-              <button
-                type='button'
-                onClick={open}
-                className='inline-flex min-h-[54px] sm:min-h-[70px] min-w-0 sm:min-w-[200px] items-center justify-center rounded-full bg-white px-8 sm:px-10 font-montserrat text-base sm:text-lg font-bold text-brand-blue shadow-lg transition-opacity hover:opacity-95'
+              <a
+                href={ctaFinalPrimaryHref}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex min-h-[54px] sm:min-h-[70px] min-w-0 sm:min-w-[200px] items-center justify-center gap-2 rounded-full bg-white px-8 sm:px-10 font-montserrat text-base sm:text-lg font-bold text-brand-blue shadow-lg transition-opacity hover:opacity-95'
               >
+                <WhatsAppIcon className='h-5 w-5 shrink-0' />
                 {ctaFinalPrimaryLabel}
-              </button>
+              </a>
               <a
                 href={ctaFinalSecondaryHref}
-                className='inline-flex min-h-[54px] sm:min-h-[70px] min-w-0 sm:min-w-[200px] items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 sm:px-10 font-montserrat text-base sm:text-lg font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/20'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex min-h-[54px] sm:min-h-[70px] min-w-0 sm:min-w-[200px] items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 sm:px-10 font-montserrat text-base sm:text-lg font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/20'
               >
+                <WhatsAppIcon className='h-5 w-5 shrink-0' />
                 {ctaFinalSecondaryLabel}
               </a>
             </div>

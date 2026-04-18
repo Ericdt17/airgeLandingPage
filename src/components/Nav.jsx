@@ -1,33 +1,17 @@
 import { hamburger } from "../assets/icons";
 import { headerLogo } from "../assets/images";
+import WhatsAppIcon from "./WhatsAppIcon";
 import {
   navCtaLabel,
   navLinks,
   navMobileMenuCloseLabel,
   navMobileMenuOpenLabel,
+  whatsappCtaHref,
 } from "../constants";
 import { useEffect, useState } from "react";
-import { useModal } from "../context/ModalContext";
-
-const CaretRight = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="w-4 h-4"
-    aria-hidden="true"
-  >
-    <polyline points="9 18 15 12 9 6" />
-  </svg>
-);
 
 const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { open } = useModal();
 
   useEffect(() => {
     const onKeyDown = (e) => {
@@ -71,14 +55,15 @@ const Nav = () => {
         </ul>
 
         <div className='flex items-center gap-3'>
-          <button
-            type='button'
-            onClick={open}
+          <a
+            href={whatsappCtaHref}
+            target='_blank'
+            rel='noopener noreferrer'
             className='max-lg:hidden inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold font-montserrat text-white shadow-lg shadow-brand-blue/20 hover:opacity-95 transition-opacity'
           >
+            <WhatsAppIcon className="h-4 w-4 shrink-0" />
             {navCtaLabel}
-            <CaretRight />
-          </button>
+          </a>
 
           <button
             type='button'
@@ -115,14 +100,16 @@ const Nav = () => {
                 ))}
               </ul>
 
-              <button
-                type='button'
-                onClick={() => { setIsMobileMenuOpen(false); open(); }}
+              <a
+                href={whatsappCtaHref}
+                target='_blank'
+                rel='noopener noreferrer'
                 className='inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold font-montserrat text-white shadow-lg shadow-brand-blue/20 hover:opacity-95 transition-opacity'
+                onClick={() => setIsMobileMenuOpen(false)}
               >
+                <WhatsAppIcon className="h-4 w-4 shrink-0" />
                 {navCtaLabel}
-                <CaretRight />
-              </button>
+              </a>
             </div>
           </div>
         </div>

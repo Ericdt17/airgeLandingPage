@@ -1,3 +1,5 @@
+import WhatsAppIcon from "./WhatsAppIcon";
+
 const Button = ({
   label,
   iconURL,
@@ -10,6 +12,7 @@ const Button = ({
   fullWidth,
   href,
   onClick,
+  showWhatsAppIcon,
 }) => {
   const className = `flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none
     ${
@@ -20,6 +23,9 @@ const Button = ({
 
   const content = (
     <>
+      {showWhatsAppIcon && (
+        <WhatsAppIcon className="h-5 w-5 shrink-0" />
+      )}
       {label}
       {iconURL && (
         <span className={iconWrapperClassName ?? ""}>
@@ -34,7 +40,16 @@ const Button = ({
   );
 
   if (href) {
-    return <a href={href} className={className}>{content}</a>;
+    return (
+      <a
+        href={href}
+        className={className}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {content}
+      </a>
+    );
   }
 
   return <button type="button" onClick={onClick} className={className}>{content}</button>;
