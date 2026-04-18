@@ -7,11 +7,17 @@ import {
 
 export const navLinks = [
     { href: "#probleme", label: "Problème" },
-    { href: "#solution", label: "Solution" },
-    { href: "#fonctionnalites", label: "Fonctionnalités" },
-    { href: "#impact", label: "Impact" },
+    { href: "#solution", label: "Notre Solution" },
+    { href: "#fonctionnalites", label: "Comment ça marche" },
+    { href: "#impact", label: "Avantages" },
     { href: "#tarifs", label: "Tarifs" },
+    { href: "#faq", label: "FAQ" },
 ];
+
+export const navCtaLabel = "Démarrer";
+
+export const navMobileMenuOpenLabel = "Ouvrir le menu";
+export const navMobileMenuCloseLabel = "Fermer le menu";
 
 export const trustedByEyebrow = "Partenaires de confiance au Cameroun";
 
@@ -23,36 +29,48 @@ export const trustedByPartners = [
     "BASTOS COURIER",
 ];
 
+export const heroBadge = "Nouvelle génération";
+
+export const heroHeadlineLines = [
+    "Vos livraisons,",
+    "enfin simples,",
+    "rapides et suivies",
+];
+
+export const heroHeadlineEmphasis = "simples";
+
+export const heroSubheadline =
+    "Envoyez vos commandes sur WhatsApp, nous nous occupons du reste avec un suivi clair et professionnel.";
+
+export const heroCtaPrimaryLabel = "Écrire sur WhatsApp";
+export const heroCtaPrimaryHref = "https://wa.me/";
+
+export const heroCtaSecondaryLabel = "Tester gratuitement";
+
 export const problemEyebrow = "Le défi logistique";
 
 export const problemHeadline =
-    "Vous gérez encore vos livraisons manuellement ?";
+    "Gérer ses livraisons ne devrait pas être un chaos";
 
 /** iconId maps to @heroicons/react/24/outline in LeProbleme.jsx */
 export const problemPoints = [
     {
-        iconId: "exclamation",
-        title: "Erreurs de saisie humaine",
+        iconId: "chat-bubble",
+        title: "Gestion Manuelle",
         description:
-            "Fini les erreurs de coordonnées et les colis perdus à cause d'une mauvaise lecture.",
+            "Les échanges WhatsApp interminables sans structure causent des retards de traitement critiques.",
     },
     {
-        iconId: "eye-slash",
-        title: "Manque de visibilité en temps réel",
+        iconId: "inbox",
+        title: "Commandes Perdues",
         description:
-            "Arrêtez de deviner où se trouvent vos livreurs et vos colis à chaque instant.",
+            "L'absence d'un système centralisé mène inévitablement à l'oubli de colis et à des pertes financières.",
     },
     {
-        iconId: "clock",
-        title: "Perte de temps administrative",
+        iconId: "banknotes",
+        title: "Pertes de Revenus",
         description:
-            "Libérez vos équipes des appels incessants et de la paperasse manuelle fastidieuse.",
-    },
-    {
-        iconId: "trending-down",
-        title: "Difficulté à scaler",
-        description:
-            "Ne soyez plus limité par vos processus manuels lorsque votre volume augmente.",
+            "Chaque erreur de livraison est un client qui ne reviendra pas et un coût opérationnel inutile.",
     },
 ];
 
@@ -81,6 +99,45 @@ export const ecosystemShowcases = [
     },
 ];
 
+export const solutionEyebrow = "La solution LivSight";
+
+export const solutionHeadlineLines = [
+    "Nous structurons vos",
+    "livraisons pour vous",
+];
+
+export const solutionBody =
+    "Continuez à utiliser WhatsApp comme vous l'aimez, mais profitez de la puissance d'une infrastructure professionnelle en arrière-plan.";
+
+export const solutionBullets = [
+    "Organisation automatique de vos messages en bons de commande.",
+    "Visibilité totale sur chaque colis en temps réel.",
+    "Confirmation instantanée envoyée à vos clients finaux.",
+];
+
+export const howItWorksHeading = "Comment ça marche ?";
+
+export const howItWorksSteps = [
+    {
+        number: "1",
+        title: "Envoyez vos commandes",
+        description:
+            "Utilisez simplement WhatsApp ou notre application pour nous transmettre les détails. Pas de formulaires complexes.",
+    },
+    {
+        number: "2",
+        title: "Nous organisons",
+        description:
+            "Notre technologie assigne le livreur le plus proche et optimise le trajet pour une rapidité maximale.",
+    },
+    {
+        number: "3",
+        title: "Suivez tout",
+        description:
+            "Accédez à votre tableau de bord en temps réel. Recevez des notifications de statut et des confirmations de dépôt.",
+    },
+];
+
 export const keyMetrics = [
     {
         value: "98.4%",
@@ -98,6 +155,56 @@ export const keyMetrics = [
         sublabel: "Réseau logistique national",
     },
 ];
+
+export const impactHeadingLines = [
+    "Une équipe formée + une",
+    "technologie puissante",
+];
+
+export const impactFeatures = [
+    {
+        iconId: "agents",
+        title: "Agents formés",
+        description:
+            "Experts en relation client, capables de gérer les situations complexes avec courtoisie et efficacité.",
+    },
+    {
+        iconId: "tech",
+        title: "Technologie interne",
+        description:
+            "Algorithmes d'optimisation de tournées et automatisation des processus pour une scalabilité sans faille.",
+    },
+];
+
+export const impactStats = [
+    { value: "98%", label: "Livraisons à temps" },
+    { value: "15min", label: "Temps de réponse moyen" },
+    { value: "500+", label: "Vendeurs actifs" },
+    { value: "0", label: "Commandes oubliées" },
+];
+
+export const promoBadge = "Offre limitée de lancement";
+
+export const promoHeadlineLine1 = "Prêt à passer au";
+export const promoHeadlineEmphasis = "niveau supérieur";
+export const promoHeadlineLine2 = " ?";
+
+export const promoOfferLeft = {
+    kicker: "Vos premières livraisons",
+    headline: "Offertes",
+};
+
+export const promoOfferRight = {
+    kicker: "Stockage illimité",
+    headline: "Gratuit",
+};
+
+export const promoSubheading =
+    "Simplifiez vos livraisons, gagnez du temps et améliorez la satisfaction de vos clients dès aujourd’hui";
+
+export const promoCtaLabel = "Démarrer mon essai gratuit";
+
+export const promoFootnotes = ["Setup en 5 minutes", "Sans carte bancaire"];
 
 export const securityEyebrow = "Sécurisation des données";
 
@@ -190,47 +297,100 @@ export const tarifsCtaSecondary = "Contacter un expert";
 /** Lien « Contacter un expert » — à ajuster au mail LivSight réel */
 export const tarifsCtaSecondaryHref = "mailto:contact@livsight.com";
 
-export const faqHeading = "Questions Fréquentes";
+export const pricingHeadline = "Tarifs simples & transparents";
 
-export const faqSubheading = "Tout ce que vous devez savoir pour commencer.";
-
-export const faqItems = [
+export const pricingPlans = [
     {
-        question:
-            "Comment LivSight assure-t-il la sécurité des données ?",
-        answer:
-            "Vos données sont chiffrées en transit et au repos (normes AES-256), hébergées sur une infrastructure cloud sécurisée et traitées conformément au RGPD. Les accès sont journalisés et limités par rôle pour réduire les risques.",
+        title: "Zone 1",
+        price: "1000",
+        currency: "XAF",
+        bullets: ["0–4 km", "~ 30 minutes", "Suivi de livraison"],
     },
     {
-        question: "Puis-je intégrer LivSight à mon système existant ?",
-        answer:
-            "Oui. LivSight propose des API et des connecteurs pour lier votre ERP, votre CRM ou vos outils métier. Notre équipe peut vous accompagner pour définir les flux (webhooks, imports automatisés) adaptés à votre stack.",
+        title: "Zone 2",
+        price: "1500",
+        currency: "XAF",
+        bullets: ["4–8 km", "~ 45 minutes", "Suivi de livraison"],
     },
     {
-        question: "Est-ce que l'application fonctionne hors-ligne ?",
-        answer:
-            "L'application livreur conserve les informations essentielles en local pour les zones à faible couverture : la synchronisation reprend automatiquement dès le retour du réseau. Les interfaces agent et client nécessitent une connexion pour garantir des données à jour.",
+        title: "Zone 3",
+        price: "2000",
+        currency: "XAF",
+        bullets: ["8–20 km", "~ 1 heure", "Suivi de livraison"],
     },
     {
-        question: "Combien de temps prend la mise en place ?",
-        answer:
-            "Une première mise en production est souvent possible en quelques semaines selon la taille de votre équipe et le périmètre (formation, imports, intégrations). Un plan de déploiement détaillé vous est proposé après un court diagnostic.",
-    },
-    {
-        question: "Quels types de supports proposez-vous ?",
-        answer:
-            "Documentation en ligne, assistance par e-mail et chat pour tous les plans ; pour les offres Enterprise, un support prioritaire avec canal dédié et temps de réponse garanti. Des sessions de formation à la prise en main peuvent être ajoutées sur demande.",
+        title: "Zone 4",
+        price: "2500",
+        currency: "XAF",
+        bullets: ["20–30 km", "~ 1h30", "Suivi de livraison"],
     },
 ];
 
-export const ctaFinalHeading = "Prêt à transformer votre logistique ?";
+export const faqHeading = "Questions fréquentes";
+
+export const faqSubheading = "";
+
+export const faqItems = [
+    {
+        question: "Dois-je utiliser l'application obligatoirement ?",
+        answer:
+            "Non. Vous pouvez continuer à envoyer vos commandes via WhatsApp. L’application est disponible si vous souhaitez une expérience plus guidée et centralisée.",
+    },
+    {
+        question: "Comment se font les paiements ?",
+        answer:
+            "Selon votre besoin : paiement à la course, facturation périodique ou modes de règlement convenus avec votre équipe. Nous vous guidons lors de l’onboarding.",
+    },
+    {
+        question: "Quelle est la zone de couverture ?",
+        answer:
+            "Nous couvrons d’abord les zones principales puis étendons progressivement selon la demande. Les zones et délais sont affichés dans la grille de tarifs.",
+    },
+    {
+        question: "Les colis sont-ils assurés ?",
+        answer:
+            "Nous appliquons des procédures de suivi et de preuve de livraison. Pour des besoins d’assurance spécifiques, une option peut être mise en place selon le type de colis.",
+    },
+    {
+        question: "Comment gérer les retours ?",
+        answer:
+            "Vous initiez un retour comme une livraison classique. Nous planifions l’enlèvement, le suivi et la confirmation, avec un statut clair à chaque étape.",
+    },
+    {
+        question: "Quels sont vos délais de livraison ?",
+        answer:
+            "Ils varient selon la zone et la disponibilité des livreurs. En général, l’intra-quartier est le plus rapide et les zones étendues prennent davantage de temps.",
+    },
+    {
+        question: "Puis-je suivre plusieurs colis à la fois ?",
+        answer:
+            "Oui. Vous avez une visibilité centralisée sur toutes vos livraisons, avec des statuts et confirmations en temps réel.",
+    },
+    {
+        question: "Est-ce sécurisé pour mes données clients ?",
+        answer:
+            "Oui. Nous appliquons des bonnes pratiques de sécurité (chiffrement, contrôles d’accès) pour protéger les données et limiter les accès au strict nécessaire.",
+    },
+    {
+        question: "Proposez-vous du stockage ?",
+        answer:
+            "Oui, selon les options et la disponibilité. Nous pouvons proposer des solutions de stockage ponctuelles ou plus régulières selon votre volume.",
+    },
+    {
+        question: "Quels sont vos tarifs ?",
+        answer:
+            "Les tarifs dépendent de la zone et du type de service. Référez-vous à la section Tarifs (Zones 1 à 4) ou contactez-nous pour une offre sur mesure.",
+    },
+];
+
+export const ctaFinalHeading = "Prêt à ne plus perdre de colis ?";
 
 export const ctaFinalSubheading =
-    "Rejoignez la révolution de la livraison au Cameroun. Démarrage instantané, sans engagement de longue durée.";
+    "Rejoignez les commerçants de Yaoundé qui ont remplacé WhatsApp par un suivi professionnel. Démarrage en 24h, sans engagement.";
 
 export const ctaFinalPrimaryLabel = "Essayer Gratuitement";
 
-export const ctaFinalSecondaryLabel = "Contacter un Expert";
+export const ctaFinalSecondaryLabel = "Parler à un Agent";
 
 /** Même contact que l’offre Tarifs — centraliser ici pour le CTA final */
 export const ctaFinalSecondaryHref = "mailto:contact@livsight.com";

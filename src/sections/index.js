@@ -3,7 +3,7 @@ import TrustedBy from "./TrustedBy";
 import LeProbleme from "./LeProbleme";
 import Solution from "./Solution";
 import MetriquesCles from "./MetriquesCles";
-import Temoignages from "./Temoignages";
+import Promotion from "./Promotion";
 import SecuriteConfiance from "./SecuriteConfiance";
 import Tarifs from "./Tarifs";
 import Faq from "./Faq";
@@ -16,7 +16,7 @@ export {
     LeProbleme,
     Solution,
     MetriquesCles,
-    Temoignages,
+    Promotion,
     SecuriteConfiance,
     Tarifs,
     Faq,

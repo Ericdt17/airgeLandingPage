@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { PlusIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { faqHeading, faqItems, faqSubheading } from "../constants";
 
@@ -13,37 +13,35 @@ const Faq = () => {
     <section id='faq' className='relative overflow-hidden bg-gray-50/80'>
       <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.12]' aria-hidden='true' />
       <div className='relative max-container padding-x py-16 sm:py-20 lg:py-24'>
-        <h2 className='text-center font-montserrat text-2xl font-bold leading-tight text-gray-900 sm:text-3xl sm:leading-9'>
+        <h2 className='text-center font-montserrat text-2xl font-bold leading-tight text-gray-900 sm:text-3xl sm:leading-9 lg:text-[36px] lg:leading-[40px]'>
           {faqHeading}
         </h2>
-        <p className='mx-auto mt-3 max-w-xl text-center font-montserrat text-base leading-6 text-gray-500'>
-          {faqSubheading}
-        </p>
+        {faqSubheading ? (
+          <p className='mx-auto mt-3 max-w-xl text-center font-montserrat text-base leading-6 text-gray-500'>
+            {faqSubheading}
+          </p>
+        ) : null}
 
         <ul className='mx-auto mt-10 max-w-3xl list-none space-y-4'>
           {faqItems.map((item, index) => {
             const isOpen = openIndex === index;
             return (
               <li key={item.question}>
-                <div
-                  className={`rounded-2xl border bg-white shadow-soft-card transition-colors duration-200 ${
-                    isOpen ? "border-brand-blue/30 ring-1 ring-brand-blue/20" : "border-gray-100"
-                  }`}
-                >
+                <div className='rounded-[32px] border border-[rgba(192,199,210,0.05)] bg-gray-100/60'>
                   <button
                     type='button'
                     id={`faq-trigger-${index}`}
                     aria-expanded={isOpen}
                     aria-controls={`faq-panel-${index}`}
                     onClick={() => toggle(index)}
-                    className='flex w-full items-start justify-between gap-4 px-4 py-5 sm:px-6 sm:py-6 text-left'
+                    className='flex w-full items-center justify-between gap-4 px-6 py-6 text-left'
                   >
-                    <span className='font-montserrat text-lg font-bold leading-7 text-gray-900'>
+                    <span className='font-montserrat text-base font-bold leading-6 text-gray-900'>
                       {item.question}
                     </span>
-                    <ChevronDownIcon
-                      className={`mt-1 h-5 w-5 shrink-0 text-gray-500 transition-transform duration-200 ${
-                        isOpen ? "rotate-180" : ""
+                    <PlusIcon
+                      className={`h-5 w-5 shrink-0 text-gray-900 transition-transform duration-200 ${
+                        isOpen ? "rotate-45" : "rotate-0"
                       }`}
                       aria-hidden='true'
                     />
@@ -56,8 +54,8 @@ const Faq = () => {
                       isOpen ? "max-h-96" : "max-h-0"
                     }`}
                   >
-                    <div className='border-t border-gray-100 px-4 pb-5 pt-0 sm:px-6 sm:pb-6'>
-                      <p className='pt-4 font-montserrat text-base leading-relaxed text-gray-600'>
+                    <div className='px-6 pb-6 pt-0'>
+                      <p className='pt-1 font-montserrat text-sm leading-relaxed text-gray-600'>
                         {item.answer}
                       </p>
                     </div>

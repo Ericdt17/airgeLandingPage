@@ -1,7 +1,15 @@
 import { Button } from "../components";
 import { useModal } from "../context/ModalContext";
-import { arrowRight } from "../assets/icons";
-import { heroDashboard } from "../assets/images";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import {
+  heroBadge,
+  heroCtaPrimaryHref,
+  heroCtaPrimaryLabel,
+  heroCtaSecondaryLabel,
+  heroHeadlineEmphasis,
+  heroHeadlineLines,
+  heroSubheadline,
+} from "../constants";
 
 const Hero = () => {
   const { open } = useModal();
@@ -9,60 +17,63 @@ const Hero = () => {
   return (
     <section
       id='home'
-      className='relative w-full overflow-hidden bg-white'
+      className='relative w-full overflow-hidden bg-transparent'
     >
-      <div className='absolute inset-0 opacity-20 bg-hero-grid bg-[length:40px_40px]' />
+      <div className='relative max-container padding-x pt-6 sm:pt-16 lg:pt-28 pb-8 sm:pb-14 lg:pb-20'>
+        <div className='mx-auto max-w-3xl text-center'>
+          <div className='inline-flex items-center rounded-full bg-lime-300 px-4 py-1.5'>
+            <span className='font-montserrat text-[11px] sm:text-xs font-bold tracking-[0.14em] uppercase text-[#181e00]'>
+              {heroBadge}
+            </span>
+          </div>
 
-      <div className='relative max-container padding-x pt-6 sm:pt-16 lg:pt-32 pb-8'>
-        <div className='mx-auto max-w-[747px] text-center'>
-          <h1 className='font-palanquin font-extrabold text-[#1a1a1a] text-[28px] leading-snug tracking-tight sm:text-4xl sm:leading-tight lg:text-[72px] lg:leading-[72px] lg:tracking-[-1.8px]'>
-            <span className='block'>Votre Partenaire de</span>
-            <span className='block'>Confiance pour la</span>
-            <span className='block text-brand-blue'>Gestion des Livraisons</span>
+          <h1 className='mt-6 font-palanquin font-extrabold text-[#1a1a1a] text-[34px] leading-[1.08] tracking-tight sm:text-5xl sm:leading-[1.05] lg:text-[72px] lg:leading-[72px] lg:tracking-[-1.8px]'>
+            {heroHeadlineLines.map((line) => {
+              if (!line.includes(heroHeadlineEmphasis)) {
+                return (
+                  <span key={line} className='block'>
+                    {line}
+                  </span>
+                );
+              }
+
+              const [before, after] = line.split(heroHeadlineEmphasis);
+              return (
+                <span key={line} className='block'>
+                  {before}
+                  <span className='text-brand-blue'>{heroHeadlineEmphasis}</span>
+                  {after}
+                </span>
+              );
+            })}
           </h1>
 
-          <p className='mt-4 sm:mt-6 font-montserrat text-base leading-6 text-gray-500 sm:text-xl sm:leading-7'>
-            Sécurisez et optimisez votre flux logistique : une solution de pointe
-            pour une protection des données et une efficacité opérationnelle
-            inégalée au Cameroun.
+          <p className='mt-4 sm:mt-6 font-montserrat text-base leading-6 text-gray-600 sm:text-xl sm:leading-7'>
+            {heroSubheadline}
           </p>
 
           <div className='mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4'>
             <Button
-              label='Démarrer maintenant'
-              iconURL={arrowRight}
-              iconAlt='arrow right'
-              iconWrapperClassName='ml-2 inline-flex items-center justify-center w-7 h-7 rounded-full bg-white'
-              iconClassName='w-5 h-5'
+              label={heroCtaPrimaryLabel}
               backgroundColor='bg-brand-blue'
               textColor='text-white'
               borderColor='border-brand-blue'
               fullWidth
-              onClick={open}
+              href={heroCtaPrimaryHref}
+              iconWrapperClassName='ml-1 inline-flex items-center justify-center'
+              iconAlt=''
+              iconURL={undefined}
             />
-            <Button
-              label='En savoir plus'
-              iconURL={arrowRight}
-              iconAlt='arrow right'
-              iconWrapperClassName='ml-2 inline-flex items-center justify-center w-7 h-7 rounded-full bg-gray-100'
-              iconClassName='w-5 h-5'
-              backgroundColor='bg-white'
-              textColor='text-gray-900'
-              borderColor='border-gray-200'
-              fullWidth
-              href='#solution'
-            />
-          </div>
-        </div>
 
-        <div className='relative mx-auto max-w-5xl'>
-         
-            <img
-              src={heroDashboard}
-              alt='Tableau de bord LivSight'
-              className='h-auto w-full'
-            />
-          
+            <button
+              type='button'
+              onClick={open}
+              className='flex justify-center items-center gap-2 px-7 py-4 border rounded-full w-full sm:w-auto font-montserrat text-lg leading-none bg-white text-brand-blue border-gray-200 hover:bg-black/5 transition-colors'
+            >
+              {heroCtaSecondaryLabel}
+              <ArrowRightIcon className='w-5 h-5' aria-hidden='true' />
+            </button>
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,11 @@
 import { hamburger } from "../assets/icons";
 import { headerLogo } from "../assets/images";
-import { navLinks } from "../constants";
+import {
+  navCtaLabel,
+  navLinks,
+  navMobileMenuCloseLabel,
+  navMobileMenuOpenLabel,
+} from "../constants";
 import { useEffect, useState } from "react";
 import { useModal } from "../context/ModalContext";
 
@@ -57,7 +62,7 @@ const Nav = () => {
             <li key={item.label}>
               <a
                 href={item.href}
-                className='font-montserrat leading-normal text-sm text-slate-gray hover:text-black transition-colors'
+                className='inline-flex items-center gap-2 font-montserrat leading-normal text-sm text-slate-gray hover:text-black transition-colors'
               >
                 {item.label}
               </a>
@@ -71,14 +76,14 @@ const Nav = () => {
             onClick={open}
             className='max-lg:hidden inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold font-montserrat text-white shadow-lg shadow-brand-blue/20 hover:opacity-95 transition-opacity'
           >
-            Démarrer
+            {navCtaLabel}
             <CaretRight />
           </button>
 
           <button
             type='button'
             className='hidden max-lg:flex items-center justify-center w-11 h-11 rounded-full hover:bg-black/5 transition-colors'
-            aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-label={isMobileMenuOpen ? navMobileMenuCloseLabel : navMobileMenuOpenLabel}
             aria-expanded={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen((v) => !v)}
           >
@@ -101,7 +106,7 @@ const Nav = () => {
                   <li key={item.label}>
                     <a
                       href={item.href}
-                      className='font-montserrat text-base text-slate-gray hover:text-black transition-colors'
+                      className='inline-flex items-center gap-2 font-montserrat text-base text-slate-gray hover:text-black transition-colors'
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
@@ -115,7 +120,7 @@ const Nav = () => {
                 onClick={() => { setIsMobileMenuOpen(false); open(); }}
                 className='inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold font-montserrat text-white shadow-lg shadow-brand-blue/20 hover:opacity-95 transition-opacity'
               >
-                Démarrer
+                {navCtaLabel}
                 <CaretRight />
               </button>
             </div>

@@ -22,3 +22,5 @@ This repo is a landing-page template. Maintain the existing **style**, **folder 
 ## Guardrails
 - Preserve responsive class intent (`max-*`, `sm/md/lg/xl`, `wide`) and grid/flex breakpoints.
 - Prefer minimal diffs: change text/assets/tokens first; only touch component structure if required for branding.
+- Treat the subtle grid background as a **template-wide** motif: prefer reusing the existing `bg-hero-grid` utility (see `tailwind.config.js`) across sections/page wrappers instead of introducing new background CSS.
+- If implementing a Figma Hero, **do not block on hero imagery**: ship the section without a hero image until explicitly requested, keeping the grid background and text/CTAs intact.

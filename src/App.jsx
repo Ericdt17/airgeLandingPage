@@ -7,10 +7,10 @@ import {
   Hero,
   LeProbleme,
   MetriquesCles,
+  Promotion,
   SecuriteConfiance,
   Solution,
   Tarifs,
-  Temoignages,
   TrustedBy,
 } from "./sections";
 
@@ -19,7 +19,9 @@ const App = () => {
     <ModalProvider>
       <ComingSoonModal />
       <Nav />
-      <main className='relative'>
+      <main className='relative overflow-hidden bg-white'>
+        <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.12]' aria-hidden='true' />
+        <div className='relative'>
         <div className='xl:padding-l wide:padding-r padding-b'>
           <Hero />
         </div>
@@ -30,13 +32,14 @@ const App = () => {
         <div className='padding'>
           <Solution />
         </div>
-        <MetriquesCles />
-        <Temoignages />
         <SecuriteConfiance />
+        <MetriquesCles />
+        <Promotion />
         <Tarifs />
         <Faq />
         <div className='padding-x sm:py-16 py-12 w-full'>
           <CtaFinal />
+        </div>
         </div>
       </main>
       <div className='relative overflow-hidden border-t border-gray-100 bg-white padding-x padding-t pb-8'>

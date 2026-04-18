@@ -1,38 +1,62 @@
-import { ecosystemEyebrow, ecosystemHeadline, ecosystemShowcases } from "../constants";
+import { CheckIcon } from "@heroicons/react/24/solid";
+import { headerLogo } from "../assets/images";
+import {
+  solutionBody,
+  solutionBullets,
+  solutionEyebrow,
+  solutionHeadlineLines,
+} from "../constants";
 
 const Solution = () => {
   return (
     <section id='solution' className='relative max-container scroll-mt-24'>
       <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.15]' aria-hidden='true' />
-      <p className='text-center font-montserrat text-sm font-semibold uppercase tracking-[1.4px] text-brand-blue'>
-        {ecosystemEyebrow}
-      </p>
-      <h2 className='mx-auto mt-4 max-w-4xl text-center font-montserrat text-2xl font-bold leading-snug text-gray-900 sm:text-3xl sm:leading-tight md:text-4xl lg:text-[48px] lg:leading-[48px]'>
-        {ecosystemHeadline}
-      </h2>
-
-      <ul className='mt-10 grid list-none grid-cols-1 gap-8 sm:gap-10 lg:mt-16 lg:grid-cols-3 lg:gap-8'>
-        {ecosystemShowcases.map(({ image, title, description }) => (
-          <li
-            key={title}
-            className='flex flex-col items-center text-center'
-          >
-            <div className='flex w-full justify-center'>
+      <div className='relative grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16'>
+        <div className='order-2 lg:order-1 flex justify-center'>
+          <div className='w-full max-w-xl rounded-[40px] border border-gray-100 bg-white p-10 shadow-soft-card sm:p-14'>
+            <div className='flex items-center justify-center'>
               <img
-                src={image}
-                alt={`Aperçu application LivSight — ${title}`}
-                className='h-auto max-h-[520px] w-auto max-w-[280px] object-contain'
+                src={headerLogo}
+                alt='LivSight'
+                className='h-16 w-auto object-contain sm:h-20'
               />
             </div>
-            <h3 className='mt-8 font-montserrat text-2xl font-bold text-gray-900'>
-              {title}
-            </h3>
-            <p className='mt-3 max-w-sm font-montserrat text-base leading-6 text-gray-500'>
-              {description}
+            <p className='mt-6 text-center font-montserrat text-sm text-gray-500'>
+              Votre service de livraison
             </p>
-          </li>
-        ))}
-      </ul>
+          </div>
+        </div>
+
+        <div className='order-1 lg:order-2'>
+          <p className='font-montserrat text-sm font-semibold uppercase tracking-[1.4px] text-brand-blue'>
+            {solutionEyebrow}
+          </p>
+          <h2 className='mt-4 font-montserrat text-2xl font-bold leading-snug text-gray-900 sm:text-3xl sm:leading-tight md:text-4xl lg:text-[48px] lg:leading-[48px]'>
+            {solutionHeadlineLines.map((line) => (
+              <span key={line} className='block'>
+                {line}
+              </span>
+            ))}
+          </h2>
+
+          <p className='mt-5 max-w-xl font-montserrat text-base leading-7 text-gray-600 sm:text-lg'>
+            {solutionBody}
+          </p>
+
+          <ul className='mt-8 space-y-4'>
+            {solutionBullets.map((text) => (
+              <li key={text} className='flex items-start gap-4'>
+                <span className='mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-blue'>
+                  <CheckIcon className='h-4 w-4 text-white' aria-hidden='true' />
+                </span>
+                <p className='font-montserrat text-base leading-6 text-gray-900'>
+                  {text}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </section>
   );
 };
