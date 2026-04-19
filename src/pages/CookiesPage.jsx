@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Nav } from "../components";
+import { SEO } from "../components";
 import CookiesSection from "../sections/Cookies";
 import { Footer } from "../sections";
 import { cookiesPageTitle, cookiesPageUpdated } from "../constants";
@@ -7,8 +7,11 @@ import { cookiesPageTitle, cookiesPageUpdated } from "../constants";
 const CookiesPage = () => {
   return (
     <>
-      <Nav />
-
+      <SEO
+        title='Politique des cookies'
+        description='Politique des cookies de LivSight — agence de livraison à Yaoundé, Cameroun.'
+        canonical='/legal/cookies'
+      />
       <main className='min-h-[60vh] bg-white'>
         <div className='bg-brand-blue'>
           <div className='max-container padding-x py-12 sm:py-16'>

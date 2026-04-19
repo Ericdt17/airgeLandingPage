@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Nav } from "../components";
+import { SEO } from "../components";
 import ConfidentialiteSection from "../sections/Confidentialite";
 import { Footer } from "../sections";
 import { privacyPageTitle, privacyPageUpdated } from "../constants";
@@ -7,8 +7,11 @@ import { privacyPageTitle, privacyPageUpdated } from "../constants";
 const ConfidentialitePage = () => {
   return (
     <>
-      <Nav />
-
+      <SEO
+        title='Politique de confidentialité'
+        description='Politique de confidentialité de LivSight — agence de livraison à Yaoundé, Cameroun.'
+        canonical='/legal/confidentialite'
+      />
       <main className='min-h-[60vh] bg-white'>
         {/* Page header */}
         <div className='bg-brand-blue'>

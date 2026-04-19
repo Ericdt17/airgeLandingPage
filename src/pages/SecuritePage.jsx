@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Nav } from "../components";
+import { SEO } from "../components";
 import SecuriteSection from "../sections/Securite";
 import { Footer } from "../sections";
 import { securityPageTitle, securityPageUpdated } from "../constants";
@@ -7,8 +7,11 @@ import { securityPageTitle, securityPageUpdated } from "../constants";
 const SecuritePage = () => {
   return (
     <>
-      <Nav />
-
+      <SEO
+        title='Sécurité'
+        description='Politique de sécurité de LivSight — protection de vos données et de vos livraisons.'
+        canonical='/legal/securite'
+      />
       <main className='min-h-[60vh] bg-white'>
         <div className='bg-brand-blue'>
           <div className='max-container padding-x py-12 sm:py-16'>

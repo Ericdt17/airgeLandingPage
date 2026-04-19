@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Nav } from "../components";
+import { SEO } from "../components";
 import { Footer } from "../sections";
 import SolutionClient from "../sections/SolutionClient";
 import {
@@ -10,8 +10,11 @@ import {
 const SolutionClientPage = () => {
     return (
         <>
-            <Nav />
-
+            <SEO
+                title='Gérez vos livraisons depuis votre téléphone'
+                description="Créez une livraison en 3 étapes, suivez vos colis en temps réel et recevez vos fonds en 3h. L'application LivSight pour commerçants à Yaoundé."
+                canonical='/plateforme/solution-client'
+            />
             <main className='min-h-[60vh] bg-white'>
                 <div className='bg-brand-blue'>
                     <div className='max-container padding-x py-12 sm:py-16'>

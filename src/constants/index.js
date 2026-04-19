@@ -108,6 +108,23 @@ import {
     plateformeIntegrationsApiPath,
 } from "./integrationsApi";
 import {
+    coursesParticuliersCtaBody,
+    coursesParticuliersCtaButtonLabel,
+    coursesParticuliersCtaTitle,
+    coursesParticuliersHighlights,
+    coursesParticuliersHowTitle,
+    coursesParticuliersIntroParagraphs,
+    coursesParticuliersPricingBody,
+    coursesParticuliersPricingTitle,
+    coursesParticuliersServices,
+    coursesParticuliersServicesTitle,
+    coursesParticuliersSteps,
+    coursesParticuliersWhatsAppHref,
+    coursesParticuliersPageTagline,
+    coursesParticuliersPageTitle,
+    plateformeCoursesParticuliersPath,
+} from "./coursesParticuliers";
+import {
     contactChannelsSectionTitle,
     contactCtaBody,
     contactCtaTitle,
@@ -134,6 +151,26 @@ import {
     contactWhatsAppChannel,
     entrepriseContactPath,
 } from "./contact";
+import {
+    APPLICATION_FORM_LABELS,
+    AVAILABILITY_OPTIONS,
+    EMPTY_JOBS_MESSAGE,
+    FUNNEL_STEPS,
+    JOB_TYPE_LABELS,
+    MAX_CV_BYTES,
+    RECRUITMENT_HERO,
+    RECRUITMENT_MODAL_TITLE,
+    RECRUITMENT_OPEN_BADGE,
+    RECRUITMENT_PROCESS_INTRO,
+    RECRUITMENT_PROCESS_TITLE,
+    RECRUITMENT_JOB_UI,
+    RECRUITMENT_VALUES,
+    RECRUITMENT_VALUES_TITLE,
+    STATUS_LABELS,
+    TRANSPORT_OPTIONS,
+    entrepriseRecrutementPath,
+    recruitmentOfferDetailPath,
+} from "./recruitment";
 
 export {
     legalConditionsPath,
@@ -247,6 +284,24 @@ export {
 };
 
 export {
+    coursesParticuliersCtaBody,
+    coursesParticuliersCtaButtonLabel,
+    coursesParticuliersCtaTitle,
+    coursesParticuliersHighlights,
+    coursesParticuliersHowTitle,
+    coursesParticuliersIntroParagraphs,
+    coursesParticuliersPricingBody,
+    coursesParticuliersPricingTitle,
+    coursesParticuliersServices,
+    coursesParticuliersServicesTitle,
+    coursesParticuliersSteps,
+    coursesParticuliersWhatsAppHref,
+    coursesParticuliersPageTagline,
+    coursesParticuliersPageTitle,
+    plateformeCoursesParticuliersPath,
+};
+
+export {
     contactChannelsSectionTitle,
     contactCtaBody,
     contactCtaTitle,
@@ -272,6 +327,27 @@ export {
     contactVisitChannel,
     contactWhatsAppChannel,
     entrepriseContactPath,
+};
+
+export {
+    APPLICATION_FORM_LABELS,
+    AVAILABILITY_OPTIONS,
+    EMPTY_JOBS_MESSAGE,
+    FUNNEL_STEPS,
+    JOB_TYPE_LABELS,
+    MAX_CV_BYTES,
+    RECRUITMENT_HERO,
+    RECRUITMENT_MODAL_TITLE,
+    RECRUITMENT_OPEN_BADGE,
+    RECRUITMENT_PROCESS_INTRO,
+    RECRUITMENT_PROCESS_TITLE,
+    RECRUITMENT_JOB_UI,
+    RECRUITMENT_VALUES,
+    RECRUITMENT_VALUES_TITLE,
+    STATUS_LABELS,
+    TRANSPORT_OPTIONS,
+    entrepriseRecrutementPath,
+    recruitmentOfferDetailPath,
 };
 
 export const navLinks = [
@@ -307,10 +383,12 @@ export const footerSpaPaths = [
     ...legalSpaPaths,
     entrepriseAProposPath,
     plateformeSolutionClientPath,
+    plateformeCoursesParticuliersPath,
     plateformePortailAgentPath,
     plateformePortailLivreurPath,
     plateformeIntegrationsApiPath,
     entrepriseContactPath,
+    entrepriseRecrutementPath,
 ];
 
 export const trustedByEyebrow = "Partenaires de confiance au Cameroun";
@@ -732,6 +810,10 @@ export const footerColumns = [
         title: "Plateforme",
         links: [
             { label: "Solution Client", href: plateformeSolutionClientPath },
+            {
+                label: "Courses particuliers",
+                href: plateformeCoursesParticuliersPath,
+            },
             { label: "Portail Agent", href: plateformePortailAgentPath },
             { label: "Portail livreur", href: plateformePortailLivreurPath },
             { label: "Intégrations API", href: plateformeIntegrationsApiPath },
@@ -742,7 +824,7 @@ export const footerColumns = [
         links: [
             { label: "À Propos", href: entrepriseAProposPath },
             { label: "Blog", href: "/entreprise/blog" },
-            { label: "Recrutement", href: "/entreprise/recrutement" },
+            { label: "Recrutement", href: entrepriseRecrutementPath },
             { label: "Contact", href: entrepriseContactPath },
         ],
     },
@@ -773,10 +855,6 @@ export const footerSocialLinks = [
     },
 ];
 
-/**
- * Locale labels — wire to i18n or locale routes when product supports multiple languages.
- * `href` can become `/en/`, `/es/`, or query-based locale switching.
- */
 export const footerLocales = [
     { code: "fr", label: "FR", href: "/", active: true },
     { code: "en", label: "EN", href: "/en/", active: false },

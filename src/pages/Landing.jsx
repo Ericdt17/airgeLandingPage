@@ -1,4 +1,4 @@
-import { Nav } from "../components";
+import { Nav, SEO } from "../components";
 import {
   CtaFinal,
   Faq,
@@ -16,6 +16,11 @@ import {
 const Landing = () => {
   return (
     <>
+      <SEO
+        title='Agence de livraison rapide à Yaoundé'
+        description="LivSight est l'agence de livraison de Yaoundé. Stockage gratuit, suivi en temps réel, reversement en 3h. Confiez vos livraisons à une équipe sérieuse."
+        canonical='/'
+      />
       <Nav />
       <main className='relative overflow-hidden bg-white'>
         <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.12]' aria-hidden='true' />

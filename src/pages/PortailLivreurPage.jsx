@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Nav } from "../components";
+import { SEO } from "../components";
 import { Footer } from "../sections";
 import PortailLivreur from "../sections/PortailLivreur";
 import {
@@ -10,8 +10,11 @@ import {
 const PortailLivreurPage = () => {
     return (
         <>
-            <Nav />
-
+            <SEO
+                title='Portail Livreur — Des livreurs guidés par algorithmes'
+                description='Nos livreurs sont guidés par des algorithmes pour livrer vos colis plus vite. GPS actif, montant verrouillé, statuts en temps réel.'
+                canonical='/plateforme/portail-livreur'
+            />
             <main className='min-h-[60vh] bg-white'>
                 <div className='bg-brand-blue'>
                     <div className='max-container padding-x py-12 sm:py-16'>

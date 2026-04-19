@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Nav } from "../components";
+import { SEO } from "../components";
 import { Footer } from "../sections";
 import PortailAgent from "../sections/PortailAgent";
 import {
@@ -10,8 +10,11 @@ import {
 const PortailAgentPage = () => {
     return (
         <>
-            <Nav />
-
+            <SEO
+                title='Portail Agent — Comment fonctionne votre agent'
+                description='Votre agent dédié gère chaque livraison en temps réel depuis son application. Assignation intelligente, suivi GPS, gestion des incidents.'
+                canonical='/plateforme/portail-agent'
+            />
             <main className='min-h-[60vh] bg-white'>
                 <div className='bg-brand-blue'>
                     <div className='max-container padding-x py-12 sm:py-16'>

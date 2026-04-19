@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Nav } from "../components";
+import { SEO } from "../components";
 import ConditionsSection from "../sections/Conditions";
 import { Footer } from "../sections";
 import { termsPageTitle, termsPageUpdated } from "../constants";
@@ -7,8 +7,11 @@ import { termsPageTitle, termsPageUpdated } from "../constants";
 const ConditionsPage = () => {
   return (
     <>
-      <Nav />
-
+      <SEO
+        title="Conditions générales d'utilisation"
+        description="Conditions générales d'utilisation du service LivSight — agence de livraison à Yaoundé, Cameroun."
+        canonical='/legal/conditions'
+      />
       <main className='min-h-[60vh] bg-white'>
         <div className='bg-brand-blue'>
           <div className='max-container padding-x py-12 sm:py-16'>

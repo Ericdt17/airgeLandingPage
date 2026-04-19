@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 import { SEO } from "../components";
 import { Footer } from "../sections";
-import APropos from "../sections/APropos";
-import { aboutPageTagline, aboutPageTitle } from "../constants";
+import CoursesParticuliers from "../sections/CoursesParticuliers";
+import {
+    coursesParticuliersPageTagline,
+    coursesParticuliersPageTitle,
+} from "../constants";
 
-const AProposPage = () => {
+const CoursesParticuliersPage = () => {
     return (
         <>
             <SEO
-                title='À propos — Notre histoire à Yaoundé'
-                description="LivSight est une agence de livraison basée à l'Hippodrome, Yaoundé. Fondée pour digitaliser et professionnaliser la livraison au Cameroun."
-                canonical='/entreprise/a-propos'
+                title='Courses particuliers à Yaoundé — documents, commissions, livraisons'
+                description="Commandez une course sans vous déplacer : documents, achats, colis, cadeaux. Même grille tarifaire que les livraisons standard. Contactez LivSight sur WhatsApp."
+                canonical='/plateforme/courses-particuliers'
             />
             <main className='min-h-[60vh] bg-white'>
                 <div className='bg-brand-blue'>
@@ -22,16 +25,16 @@ const AProposPage = () => {
                             ← Retour à l&apos;accueil
                         </Link>
                         <h1 className='mt-4 font-montserrat text-3xl font-extrabold tracking-tight text-white sm:text-4xl'>
-                            {aboutPageTitle}
+                            {coursesParticuliersPageTitle}
                         </h1>
                         <p className='mt-2 font-montserrat text-sm text-white/60'>
-                            {aboutPageTagline}
+                            {coursesParticuliersPageTagline}
                         </p>
                     </div>
                 </div>
 
                 <div className='max-container padding-x'>
-                    <APropos />
+                    <CoursesParticuliers />
                 </div>
             </main>
 
@@ -48,4 +51,4 @@ const AProposPage = () => {
     );
 };
 
-export default AProposPage;
+export default CoursesParticuliersPage;
