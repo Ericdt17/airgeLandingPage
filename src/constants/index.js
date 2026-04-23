@@ -391,14 +391,15 @@ export const footerSpaPaths = [
     entrepriseRecrutementPath,
 ];
 
-export const trustedByEyebrow = "Partenaires de confiance au Cameroun";
+export const trustedByEyebrow = "Partenaires de confiance a Yaoundé";
 
 export const trustedByPartners = [
-    "ONGOLA EXPRESS",
-    "KAMER DELIVERY",
-    "YAOUNDÉ HUB",
-    "MVAN TRANSPORT",
-    "BASTOS COURIER",
+    "THE HYPE STORE",
+    "CLICKXY",
+    "2KD",
+    "MR FALL BEAUTY",
+    "SUMMER VIBES",
+    "DOPE CIGARS",
 ];
 
 export const heroBadge = "Nouvelle génération";
