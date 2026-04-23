@@ -1,13 +1,11 @@
-import { Button, WhatsAppIcon } from "../components";
+import { Button } from "../components";
 import {
   heroBadge,
   heroCtaPrimaryHref,
-  heroCtaPrimaryLabel,
   heroCtaSecondaryLabel,
   heroHeadlineEmphasis,
   heroHeadlineLines,
   heroSubheadline,
-  whatsappCtaHref,
 } from "../constants";
 
 const Hero = () => {
@@ -52,7 +50,7 @@ const Hero = () => {
 
           <div className='mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4'>
             <Button
-              label={heroCtaPrimaryLabel}
+              label={heroCtaSecondaryLabel}
               backgroundColor='bg-brand-blue'
               textColor='text-white'
               borderColor='border-brand-blue'
@@ -63,16 +61,6 @@ const Hero = () => {
               iconAlt=''
               iconURL={undefined}
             />
-
-            <a
-              href={whatsappCtaHref}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex justify-center items-center gap-2 px-7 py-4 border rounded-full w-full sm:w-auto font-montserrat text-lg leading-none bg-white text-brand-blue border-gray-200 hover:bg-black/5 transition-colors'
-            >
-              <WhatsAppIcon className='h-5 w-5 shrink-0' />
-              {heroCtaSecondaryLabel}
-            </a>
           </div>
         </div>
       </div>

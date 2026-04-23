@@ -400,6 +400,7 @@ export const trustedByPartners = [
     "MR FALL BEAUTY",
     "SUMMER VIBES",
     "DOPE CIGARS",
+    "HEAVEN SUGAR",
 ];
 
 export const heroBadge = "Nouvelle génération";
@@ -418,7 +419,7 @@ export const heroSubheadline =
 export const heroCtaPrimaryLabel = "Écrire sur WhatsApp";
 export const heroCtaPrimaryHref = whatsappCtaHref;
 
-export const heroCtaSecondaryLabel = "Tester gratuitement";
+export const heroCtaSecondaryLabel = "Écris-nous pour tester gratuitement";
 
 export const problemEyebrow = "Le défi logistique";
 
