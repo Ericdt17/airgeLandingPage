@@ -280,6 +280,15 @@ const ApplicationForm = ({
         }
 
         setSubmitStatus("idle");
+        if (result?.error === "network") {
+            // Aucun body lisible (CORS / proxy / réseau). On affiche un message actionnable.
+            setSubmitError(STATUS_LABELS.submitErrorNetwork);
+            return;
+        }
+        if (result.status === 413) {
+            setSubmitError(STATUS_LABELS.submitError413);
+            return;
+        }
         if (result.status === 409) {
             setSubmitError(STATUS_LABELS.submitError409);
             return;
@@ -292,6 +301,10 @@ const ApplicationForm = ({
             setSubmitError(
                 result.message || STATUS_LABELS.submitError400Fallback,
             );
+            return;
+        }
+        if (result?.message) {
+            setSubmitError(result.message);
             return;
         }
         setSubmitError(STATUS_LABELS.submitErrorGeneric);

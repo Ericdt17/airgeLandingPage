@@ -71,6 +71,9 @@ export const STATUS_LABELS = {
     submitSuccessTitle: "Candidature envoyée !",
     submitSuccessSubtitle: "Nous reviendrons vers vous très prochainement.",
     submitErrorGeneric: "Une erreur est survenue, veuillez réessayer.",
+    submitErrorNetwork:
+        "Upload impossible. Vérifiez votre connexion et réessayez avec un fichier inférieur à 5 Mo.",
+    submitError413: "Fichier trop volumineux (max 5 Mo).",
     submitError409: "Vous avez déjà postulé pour ce poste.",
     submitError400Fallback: "Données invalides. Vérifiez les champs et réessayez.",
     submitErrorMissingJobId:
