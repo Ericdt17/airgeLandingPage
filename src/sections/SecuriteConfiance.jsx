@@ -4,7 +4,7 @@ const SecuriteConfiance = () => {
   return (
     <section
       id='fonctionnalites'
-      className='relative overflow-hidden scroll-mt-24 rounded-[32px] bg-gray-50/80'
+      className='relative overflow-hidden scroll-mt-24 rounded-[32px] bg-airge-bg-subtle/80'
     >
       <div
         className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.12]'
@@ -12,7 +12,7 @@ const SecuriteConfiance = () => {
       />
 
       <div className='relative max-container px-6 py-12 sm:px-10 sm:py-16 lg:px-14 lg:py-20'>
-        <h2 className='text-center font-montserrat text-2xl font-bold leading-snug text-gray-900 sm:text-3xl sm:leading-tight md:text-4xl lg:text-[48px] lg:leading-[48px]'>
+        <h2 className='text-center font-montserrat text-2xl font-bold leading-snug text-airge-foreground sm:text-3xl sm:leading-tight md:text-4xl lg:text-[48px] lg:leading-[48px]'>
           {howItWorksHeading}
         </h2>
 
@@ -20,19 +20,19 @@ const SecuriteConfiance = () => {
           {howItWorksSteps.map((step) => (
             <li
               key={step.number}
-              className='relative overflow-hidden rounded-3xl border border-gray-100 bg-white px-8 py-9 shadow-soft-card'
+              className='relative overflow-hidden rounded-3xl border border-airge-border bg-airge-surface px-8 py-9 shadow-soft-card'
             >
-              <div className='flex h-12 w-12 items-center justify-center rounded-full bg-primary'>
-                <span className='font-montserrat text-lg font-bold text-gray-900'>
+              <div className='flex h-12 w-12 items-center justify-center rounded-full bg-airge-bg-deep'>
+                <span className='font-montserrat text-lg font-bold text-airge-primary'>
                   {step.number}
                 </span>
               </div>
 
-              <h3 className='mt-5 font-montserrat text-xl font-bold leading-snug text-gray-900 sm:text-2xl'>
+              <h3 className='mt-5 font-montserrat text-xl font-bold leading-snug text-airge-foreground sm:text-2xl'>
                 {step.title}
               </h3>
 
-              <p className='mt-3 font-montserrat text-sm leading-relaxed text-gray-600'>
+              <p className='mt-3 font-montserrat text-sm leading-relaxed text-airge-muted'>
                 {step.description}
               </p>
             </li>

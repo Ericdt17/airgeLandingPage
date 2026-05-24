@@ -1,5 +1,5 @@
 import { hamburger } from "../assets/icons";
-import { headerLogo } from "../assets/images";
+import NavBrand from "./NavBrand";
 import WhatsAppIcon from "./WhatsAppIcon";
 import {
   navCtaLabel,
@@ -9,7 +9,6 @@ import {
   whatsappCtaHref,
 } from "../constants";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -30,24 +29,16 @@ const Nav = () => {
   }, []);
 
   return (
-    <header className='sticky top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-md'>
+    <header className='sticky top-0 z-50 w-full border-b border-airge-border bg-airge-bg/90 backdrop-blur-md'>
       <nav className='flex justify-between items-center max-container px-4 sm:px-16 h-20'>
-        <Link to='/'>
-          <img
-            src={headerLogo}
-            alt='LivSight'
-            width={190}
-            height={72}
-            className='m-0 w-[120px] sm:w-[160px] md:w-[200px] h-full max-h-10 sm:max-h-12 md:max-h-14 object-contain'
-          />
-        </Link>
+        <NavBrand />
 
         <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
           {navLinks.map((item) => (
             <li key={item.label}>
               <a
                 href={item.href}
-                className='inline-flex items-center gap-2 font-montserrat leading-normal text-sm text-slate-gray hover:text-black transition-colors'
+                className='inline-flex items-center gap-2 font-montserrat leading-normal text-sm text-airge-muted hover:text-airge-foreground transition-colors'
               >
                 {item.label}
               </a>
@@ -60,7 +51,7 @@ const Nav = () => {
             href={whatsappCtaHref}
             target='_blank'
             rel='noopener noreferrer'
-            className='max-lg:hidden inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold font-montserrat text-white shadow-lg shadow-brand-blue/20 hover:opacity-95 transition-opacity'
+            className='max-lg:hidden inline-flex items-center gap-2 rounded-full bg-airge-primary px-6 py-3 text-sm font-semibold font-montserrat text-airge-ink shadow-cta-final hover:bg-airge-primary-hover transition-colors'
           >
             <WhatsAppIcon className="h-4 w-4 shrink-0" />
             {navCtaLabel}
@@ -68,12 +59,12 @@ const Nav = () => {
 
           <button
             type='button'
-            className='hidden max-lg:flex items-center justify-center w-11 h-11 rounded-full hover:bg-black/5 transition-colors'
+            className='hidden max-lg:flex items-center justify-center w-11 h-11 rounded-full hover:bg-airge-surface transition-colors'
             aria-label={isMobileMenuOpen ? navMobileMenuCloseLabel : navMobileMenuOpenLabel}
             aria-expanded={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen((v) => !v)}
           >
-            <img src={hamburger} alt='' width={24} height={24} />
+            <img src={hamburger} alt='' width={24} height={24} className='invert opacity-90' />
           </button>
         </div>
       </nav>
@@ -81,18 +72,18 @@ const Nav = () => {
       {isMobileMenuOpen && (
         <div className='lg:hidden'>
           <div
-            className='fixed inset-0 bg-black/20'
+            className='fixed inset-0 bg-black/50'
             aria-hidden='true'
             onClick={() => setIsMobileMenuOpen(false)}
           />
-          <div className='absolute left-0 right-0 top-full bg-white border-t border-gray-100 shadow-lg'>
+          <div className='absolute left-0 right-0 top-full bg-airge-surface border-t border-airge-border shadow-lg'>
             <div className='max-container padding-x py-6 flex flex-col gap-4'>
               <ul className='flex flex-col gap-4'>
                 {navLinks.map((item) => (
                   <li key={item.label}>
                     <a
                       href={item.href}
-                      className='inline-flex items-center gap-2 font-montserrat text-base text-slate-gray hover:text-black transition-colors'
+                      className='inline-flex items-center gap-2 font-montserrat text-base text-airge-muted hover:text-airge-foreground transition-colors'
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
@@ -105,7 +96,7 @@ const Nav = () => {
                 href={whatsappCtaHref}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold font-montserrat text-white shadow-lg shadow-brand-blue/20 hover:opacity-95 transition-opacity'
+                className='inline-flex items-center justify-center gap-2 rounded-full bg-airge-primary px-6 py-3 text-sm font-semibold font-montserrat text-airge-ink shadow-cta-final hover:bg-airge-primary-hover transition-colors'
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <WhatsAppIcon className="h-4 w-4 shrink-0" />

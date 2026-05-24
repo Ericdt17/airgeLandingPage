@@ -350,6 +350,8 @@ export {
     recruitmentOfferDetailPath,
 };
 
+export const brandName = "AIRGÉ";
+
 export const navLinks = [
     { href: "#probleme", label: "Problème" },
     { href: "#solution", label: "Notre Solution" },

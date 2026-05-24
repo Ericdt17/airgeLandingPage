@@ -4,11 +4,11 @@ const TrustedBy = () => {
   return (
     <section
       id='trusted-by'
-      className='relative overflow-hidden border-y border-gray-100 bg-gray-50'
+      className='relative overflow-hidden border-y border-airge-border bg-airge-bg-subtle'
     >
       <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.12]' aria-hidden='true' />
       <div className='relative max-container padding-x py-12 sm:py-16'>
-        <p className='text-center font-montserrat text-sm font-bold uppercase tracking-[1.4px] text-gray-400'>
+        <p className='text-center font-montserrat text-sm font-bold uppercase tracking-[1.4px] text-airge-muted'>
           {trustedByEyebrow}
         </p>
 
@@ -19,7 +19,7 @@ const TrustedBy = () => {
                 key={i}
                 className='opacity-50 hover:opacity-100 transition-opacity duration-300'
               >
-                <span className='font-montserrat text-base sm:text-xl md:text-2xl font-extrabold tracking-tight text-gray-800'>
+                <span className='font-montserrat text-base sm:text-xl md:text-2xl font-extrabold tracking-tight text-airge-foreground'>
                   {name}
                 </span>
               </li>

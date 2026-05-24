@@ -14,11 +14,11 @@ const Button = ({
   onClick,
   showWhatsAppIcon,
 }) => {
-  const className = `flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none
+  const className = `flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none transition-colors
     ${
       backgroundColor
         ? `${backgroundColor} ${textColor} ${borderColor}`
-        : "bg-coral-red text-white border-coral-red"
+        : "bg-airge-primary text-airge-ink border-airge-primary hover:bg-airge-primary-hover"
     } rounded-full ${fullWidth ? "w-full sm:w-auto" : ""}`;
 
   const content = (
@@ -32,7 +32,7 @@ const Button = ({
           <img
             src={iconURL}
             alt={iconAlt ?? "button icon"}
-            className={iconClassName ?? "ml-2 rounded-full bg-white w-5 h-5"}
+            className={iconClassName ?? "ml-2 rounded-full bg-airge-surface w-5 h-5"}
           />
         </span>
       )}

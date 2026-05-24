@@ -6,7 +6,6 @@ import {
   Hero,
   LeProbleme,
   MetriquesCles,
-  Promotion,
   SecuriteConfiance,
   Solution,
   Tarifs,
@@ -22,7 +21,7 @@ const Landing = () => {
         canonical='/'
       />
       <Nav />
-      <main className='relative overflow-hidden bg-white'>
+      <main className='relative overflow-hidden bg-airge-bg'>
         <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.12]' aria-hidden='true' />
         <div className='relative'>
           <div className='xl:padding-l wide:padding-r padding-b'>
@@ -37,7 +36,6 @@ const Landing = () => {
           </div>
           <SecuriteConfiance />
           <MetriquesCles />
-          <Promotion />
           <Tarifs />
           <Faq />
           <div className='padding-x sm:py-16 py-12 w-full'>
@@ -45,7 +43,7 @@ const Landing = () => {
           </div>
         </div>
       </main>
-      <div className='relative overflow-hidden border-t border-gray-100 bg-white padding-x padding-t pb-8'>
+      <div className='relative overflow-hidden border-t border-airge-border bg-airge-bg padding-x padding-t pb-8'>
         <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.15]' aria-hidden='true' />
         <div className='relative'>
           <Footer />

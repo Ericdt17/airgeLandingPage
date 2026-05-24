@@ -1,5 +1,29 @@
+/* TODO: add Mona Sans @font-face when font files are available */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+/* AIRGÉ design tokens — source of truth (aligned with app repo) */
+:root {
+  --airge-bg: #312d2c;
+  --airge-bg-subtle: #2e2927;
+  --airge-bg-deep: #153140;
+
+  --airge-surface: #3a3837;
+  --airge-surface-soft: #2e2927;
+
+  --airge-foreground: #f4f7f8;
+  --airge-muted: #b8b8b8;
+
+  --airge-primary: #5ee0e5;
+  --airge-primary-hover: #209ab0;
+  --airge-primary-light: #b1f6f6;
+
+  --airge-border: #3a7779;
+
+  --airge-accent-warm: #6d302e;
+  --airge-accent-danger: #852527;
+
+  --airge-ink: #153140;
+}
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +36,14 @@
   scroll-behavior: smooth;
 }
 
+@layer base {
+  body {
+    background-color: var(--airge-bg);
+    color: var(--airge-foreground);
+    @apply antialiased;
+  }
+}
+
 @layer components {
   .max-container {
     max-width: 1440px;
@@ -19,7 +51,14 @@
   }
 
   .input {
-    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+    @apply sm:flex-1 max-sm:w-full text-base leading-normal pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:rounded-full;
+    color: var(--airge-muted);
+    border-color: var(--airge-border);
+  }
+
+  .info-text {
+    @apply font-montserrat text-lg leading-7;
+    color: var(--airge-muted);
   }
 }
 
@@ -52,7 +91,12 @@
     @apply sm:pb-24 pb-12;
   }
 
-  .info-text {
-    @apply font-montserrat text-slate-gray text-lg leading-7;
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      90deg,
+      var(--airge-primary),
+      var(--airge-primary-light)
+    );
   }
 }

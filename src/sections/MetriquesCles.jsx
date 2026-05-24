@@ -11,12 +11,12 @@ const MetriquesCles = () => {
     <section
       id='impact'
       aria-labelledby='impact-heading'
-      className='relative overflow-hidden scroll-mt-24 bg-security-ink'
+      className='relative overflow-hidden scroll-mt-24 bg-airge-bg-deep'
     >
-      <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.06]' aria-hidden='true' />
+      <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.12]' aria-hidden='true' />
       <div className='relative max-container padding-x py-16 sm:py-20 lg:py-24'>
         <div
-          className='pointer-events-none absolute right-[-220px] top-[-260px] h-[520px] w-[520px] rounded-full bg-brand-blue/20 blur-3xl'
+          className='pointer-events-none absolute right-[-220px] top-[-260px] h-[520px] w-[520px] rounded-full bg-airge-primary/20 blur-3xl'
           aria-hidden='true'
         />
 
@@ -24,7 +24,7 @@ const MetriquesCles = () => {
           <div>
             <h2
               id='impact-heading'
-              className='font-montserrat text-2xl font-bold leading-snug text-white sm:text-3xl sm:leading-tight md:text-4xl lg:text-[48px] lg:leading-[48px]'
+              className='font-montserrat text-2xl font-bold leading-snug text-airge-foreground sm:text-3xl sm:leading-tight md:text-4xl lg:text-[48px] lg:leading-[48px]'
             >
               {impactHeadingLines.map((line) => (
                 <span key={line} className='block'>
@@ -38,14 +38,14 @@ const MetriquesCles = () => {
                 const Icon = iconMap[item.iconId];
                 return (
                   <li key={item.title} className='flex items-start gap-4'>
-                    <div className='mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-lime-300/15'>
-                      <Icon className='h-5 w-5 text-lime-300' aria-hidden='true' />
+                    <div className='mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-airge-primary/15'>
+                      <Icon className='h-5 w-5 text-airge-primary' aria-hidden='true' />
                     </div>
                     <div>
-                      <p className='font-montserrat text-lg font-bold text-white'>
+                      <p className='font-montserrat text-lg font-bold text-airge-foreground'>
                         {item.title}
                       </p>
-                      <p className='mt-1 max-w-xl font-montserrat text-sm leading-6 text-slate-300'>
+                      <p className='mt-1 max-w-xl font-montserrat text-sm leading-6 text-airge-muted'>
                         {item.description}
                       </p>
                     </div>
@@ -59,12 +59,12 @@ const MetriquesCles = () => {
             {impactStats.map((stat) => (
               <li
                 key={stat.label}
-                className='rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-md'
+                className='rounded-3xl border border-airge-border bg-airge-surface/60 p-6 backdrop-blur-md'
               >
-                <p className='font-montserrat text-2xl font-extrabold text-lime-300 sm:text-[30px] sm:leading-9'>
+                <p className='font-montserrat text-2xl font-extrabold text-airge-primary sm:text-[30px] sm:leading-9'>
                   {stat.value}
                 </p>
-                <p className='mt-3 font-montserrat text-xs font-medium uppercase tracking-[0.14em] text-slate-300'>
+                <p className='mt-3 font-montserrat text-xs font-medium uppercase tracking-[0.14em] text-airge-muted'>
                   {stat.label}
                 </p>
               </li>
