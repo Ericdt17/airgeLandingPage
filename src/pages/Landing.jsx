@@ -9,15 +9,14 @@ import {
   SecuriteConfiance,
   Solution,
   Tarifs,
-  TrustedBy,
 } from "../sections";
 
 const Landing = () => {
   return (
     <>
       <SEO
-        title='Agence de livraison rapide à Yaoundé'
-        description="LivSight est l'agence de livraison de Yaoundé. Stockage gratuit, suivi en temps réel, reversement en 3h. Confiez vos livraisons à une équipe sérieuse."
+        title='Crée du contenu qui te fait connaître et te rapporte des opportunités'
+        description="AIRGÉ t'aide à trouver quoi publier, structurer tes vidéos, construire une audience et transformer ta visibilité en clients, ventes, collaborations ou brand deals."
         canonical='/'
       />
       <Nav />
@@ -27,7 +26,6 @@ const Landing = () => {
           <div className='xl:padding-l wide:padding-r padding-b'>
             <Hero />
           </div>
-          <TrustedBy />
           <div className='padding'>
             <LeProbleme />
           </div>

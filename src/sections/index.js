@@ -1,5 +1,4 @@
 import Hero from "./Hero";
-import TrustedBy from "./TrustedBy";
 import LeProbleme from "./LeProbleme";
 import Solution from "./Solution";
 import MetriquesCles from "./MetriquesCles";
@@ -12,7 +11,6 @@ import Footer from "./Footer";
 
 export {
     Hero,
-    TrustedBy,
     LeProbleme,
     Solution,
     MetriquesCles,

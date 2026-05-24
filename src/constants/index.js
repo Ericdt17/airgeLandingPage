@@ -369,6 +369,9 @@ export const navMobileMenuCloseLabel = "Fermer le menu";
 /** Point d’entrée WhatsApp unique pour tous les CTA marketing */
 export const whatsappCtaHref = "https://wa.link/zc5ijs";
 
+/** Lien app (stores ou deep link TikTok) — à remplacer par l’URL réelle */
+export const appCtaHref = "#";
+
 /** Route SPA — politique de confidentialité */
 export const legalConfidentialitePath = "/legal/confidentialite";
 
@@ -405,23 +408,22 @@ export const trustedByPartners = [
     "HEAVEN SUGAR",
 ];
 
-export const heroBadge = "Nouvelle génération";
+export const heroBadge = "Même si tu pars de zéro";
 
-export const heroHeadlineLines = [
-    "Vos livraisons,",
-    "enfin simples,",
-    "rapides et suivies",
-];
-
-export const heroHeadlineEmphasis = "simples";
+export const heroHeadline =
+    "Crée du contenu qui te fait connaître et te rapporte des opportunités.";
 
 export const heroSubheadline =
-    "Envoyez vos commandes sur WhatsApp, nous nous occupons du reste avec un suivi clair et professionnel.";
+    "AIRGÉ t’aide à trouver quoi publier, structurer tes vidéos, construire une audience et transformer ta visibilité en clients, ventes, collaborations ou brand deals grâce à l’IA, aux formations et à l’accompagnement.";
 
-export const heroCtaPrimaryLabel = "Écrire sur WhatsApp";
-export const heroCtaPrimaryHref = whatsappCtaHref;
+export const heroCtaPrimaryLabel = "Commencer maintenant";
+export const heroCtaPrimaryHref = appCtaHref;
 
-export const heroCtaSecondaryLabel = "Écris-nous pour tester gratuitement";
+export const heroCtaSecondaryLabel = "Voir comment ça marche";
+export const heroCtaSecondaryHref = "#fonctionnalites";
+
+export const heroMicrotext =
+    "Pour créateurs, étudiants, coachs, freelances, artisans et petits business.";
 
 export const problemEyebrow = "Le défi logistique";
 
