@@ -862,10 +862,10 @@ export const footerSocialLinks = [
 ];
 
 /** Email support — pages légales AIRGÉ */
-export const legalSupportEmail = "contact@airge.com";
+export const legalSupportEmail = "ebassanoa.malcommarie@gmail.com";
 
-/** Email affiché sur pages contact / à propos (hors scope légal) */
-export const footerSupportEmail = "contact@livsight.com";
+/** Email contact (pages contact, à propos, footer) */
+export const footerSupportEmail = legalSupportEmail;
 
 export const footerPrivacyWhatsAppLabel = "WhatsApp";
 
@@ -932,7 +932,7 @@ export const privacySections = [
             "La rectification d’informations inexactes",
             "L’effacement, dans les limites prévues par la loi",
             "L’opposition à certains traitements",
-            "Pour exercer ces droits : contact@airge.com",
+            `Pour exercer ces droits : ${legalSupportEmail}`,
         ],
     },
     {
