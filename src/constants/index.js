@@ -352,6 +352,18 @@ export {
 
 export const brandName = "AIRGÉ";
 
+/** URL publique (Open Graph, canonical, sitemap) */
+export const siteBaseUrl = "https://www.video-story.com";
+
+export const siteDefaultTitle =
+    "Crée du contenu qui te fait connaître et te rapporte des opportunités";
+
+export const siteDefaultDescription =
+    "AIRGÉ t'aide à trouver quoi publier, structurer tes vidéos, construire une audience et transformer ta visibilité en clients, ventes, collaborations ou brand deals.";
+
+/** Image de partage (fichier dans public/, ex. /og-airge.jpg, 1200×630) — laisser vide si absente */
+export const siteOgImagePath = "";
+
 export const navLinks = [
     { href: "#probleme", label: "Problème" },
     { href: "#solution", label: "Notre Solution" },
