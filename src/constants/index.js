@@ -1,4 +1,4 @@
-import { facebook, instagram } from "../assets/icons";
+import { tiktok } from "../assets/icons";
 import {
     ecosystemAgent,
     ecosystemClient,
@@ -14,7 +14,6 @@ import {
 } from "./conditions";
 import {
     legalSecurityPath,
-    securityAgencyAddress,
     securityAgencyPhone,
     securityContactIntro,
     securityGroups,
@@ -183,7 +182,6 @@ export {
 
 export {
     legalSecurityPath,
-    securityAgencyAddress,
     securityAgencyPhone,
     securityContactIntro,
     securityGroups,
@@ -373,16 +371,18 @@ export const navLinks = [
     { href: "#faq", label: "FAQ" },
 ];
 
+/** Application AIRGÉ (analyse vidéo, formations) */
+export const appCtaHref = "https://app.video-story.com/video";
+
 export const navCtaLabel = "Démarrer";
+
+export const navCtaHref = appCtaHref;
 
 export const navMobileMenuOpenLabel = "Ouvrir le menu";
 export const navMobileMenuCloseLabel = "Fermer le menu";
 
-/** Point d’entrée WhatsApp unique pour tous les CTA marketing */
+/** Point d’entrée WhatsApp (pages contact, etc.) */
 export const whatsappCtaHref = "https://wa.link/zc5ijs";
-
-/** Lien app (stores ou deep link TikTok) — à remplacer par l’URL réelle */
-export const appCtaHref = "#";
 
 /** Route SPA — politique de confidentialité */
 export const legalConfidentialitePath = "/legal/confidentialite";
@@ -395,18 +395,8 @@ export const legalSpaPaths = [
     legalCookiesPath,
 ];
 
-/** Liens footer gérés par React Router (légal + pages entreprise déclarées) */
-export const footerSpaPaths = [
-    ...legalSpaPaths,
-    entrepriseAProposPath,
-    plateformeSolutionClientPath,
-    plateformeCoursesParticuliersPath,
-    plateformePortailAgentPath,
-    plateformePortailLivreurPath,
-    plateformeIntegrationsApiPath,
-    entrepriseContactPath,
-    entrepriseRecrutementPath,
-];
+/** Liens footer gérés par React Router (pages légales uniquement) */
+export const footerSpaPaths = [...legalSpaPaths];
 
 export const trustedByEyebrow = "Partenaires de confiance a Yaoundé";
 
@@ -834,41 +824,22 @@ export const partnerTestimonials = [
     },
 ];
 
-/**
- * Footer — Figma §16 (LivSight).
- *
- * All `href` values below are intentional placeholders for future pages or URLs.
- * Replace them here when routes, CMS pages, or external profiles exist (e.g. React Router paths,
- * marketing site slugs, or `https://…` links). This SPA ships without a router: direct visits to
- * these paths may 404 until your host is configured for SPA fallback or pages are added.
- */
+/** Footer — marque, ancres home, légal, réseaux */
 export const footerTagline =
-    "La plateforme de livraison nouvelle génération pour les entreprises modernes au Cameroun.";
+    "Formations et outil IA pour apprendre à créer du contenu, construire ton audience et transformer ta visibilité en opportunités.";
 
-export const footerCopyright =
-    "© 2026 LivSight - Gestion des Livraisons. Tous droits réservés.";
+export const footerCopyright = "© 2026 AIRGÉ. Tous droits réservés.";
 
 export const footerColumns = [
     {
-        title: "Plateforme",
+        title: "Découvrir",
         links: [
-            { label: "Solution Client", href: plateformeSolutionClientPath },
-            {
-                label: "Courses particuliers",
-                href: plateformeCoursesParticuliersPath,
-            },
-            { label: "Portail Agent", href: plateformePortailAgentPath },
-            { label: "Portail livreur", href: plateformePortailLivreurPath },
-            { label: "Intégrations API", href: plateformeIntegrationsApiPath },
-        ],
-    },
-    {
-        title: "Entreprise",
-        links: [
-            { label: "À Propos", href: entrepriseAProposPath },
-            { label: "Blog", href: "/entreprise/blog" },
-            { label: "Recrutement", href: entrepriseRecrutementPath },
-            { label: "Contact", href: entrepriseContactPath },
+            { label: "Problème", href: "#probleme" },
+            { label: "Notre solution", href: "#solution" },
+            { label: "Comment ça marche", href: "#fonctionnalites" },
+            { label: "Avantages", href: "#impact" },
+            { label: "Offre", href: "#tarifs" },
+            { label: "FAQ", href: "#faq" },
         ],
     },
     {
@@ -882,126 +853,92 @@ export const footerColumns = [
     },
 ];
 
-/**
- * Social icons — replace `href` with real profile URLs when available.
- */
 export const footerSocialLinks = [
     {
-        href: "https://www.facebook.com/share/1J4aQ42T2t/?mibextid=wwXIfr",
-        label: "LivSight sur Facebook",
-        icon: facebook,
-    },
-    {
-        href: "https://www.instagram.com/livsight7?igsh=eHkyMjQyZWVkeGc4&utm_source=qr",
-        label: "LivSight sur Instagram",
-        icon: instagram,
+        href: "https://www.tiktok.com/@malcom.airge.owner?lang=fr",
+        label: "AIRGÉ sur TikTok",
+        icon: tiktok,
     },
 ];
 
-export const footerLocales = [
-    { code: "fr", label: "FR", href: "/", active: true },
-    { code: "en", label: "EN", href: "/en/", active: false },
-    { code: "es", label: "ES", href: "/es/", active: false },
-];
+/** Email support — pages légales AIRGÉ */
+export const legalSupportEmail = "contact@airge.com";
 
-/** Titre — politique de confidentialité (page `/legal/confidentialite`). */
-export const footerPrivacyHeading = "Confidentialité";
-
+/** Email affiché sur pages contact / à propos (hors scope légal) */
 export const footerSupportEmail = "contact@livsight.com";
-
-export const footerPrivacyItems = [
-    {
-        title: "Données collectées",
-        body: "Nom, numéro de téléphone, adresse de livraison",
-    },
-    {
-        title: "Usage",
-        body: "Uniquement pour traiter et suivre votre commande",
-    },
-    {
-        title: "Partage",
-        body: "Partagées avec le livreur assigné uniquement",
-    },
-    {
-        title: "Conservation",
-        body: "Données conservées le temps nécessaire au traitement",
-    },
-];
-
-export const footerPrivacyContactLead = "Pour toute demande :";
-
-export const footerPrivacyContactConnector = " ou ";
 
 export const footerPrivacyWhatsAppLabel = "WhatsApp";
 
-/** Politique de confidentialité — page dédiée */
+/** Politique de confidentialité — page `/legal/confidentialite` */
 export const privacyPageTitle = "Politique de Confidentialité";
 
 export const privacyPageUpdated = "Dernière mise à jour : avril 2026";
 
+export const privacyContactIntro =
+    "Pour toute question sur vos données ou pour exercer vos droits, contactez-nous par email :";
+
 export const privacyPageIntro =
-    "Chez LivSight, la confiance de nos clients est notre priorité. Cette politique explique clairement quelles données nous collectons, pourquoi, et comment nous les protégeons. Nous nous engageons à ne jamais vendre ni exploiter vos données à des fins commerciales.";
+    "Chez AIRGÉ, nous traitons vos données avec soin. Cette politique explique ce que nous collectons, pourquoi, et comment nous protégeons vos informations lorsque vous utilisez nos formations et notre outil IA.";
 
 export const privacySections = [
     {
         number: "01",
         title: "Données que nous collectons",
-        body: "Lors de l'utilisation de nos services, nous collectons uniquement les informations nécessaires au bon déroulement de votre livraison :",
+        body: "Selon votre usage de la plateforme, nous pouvons collecter :",
         items: [
-            "Nom et prénom de l'expéditeur et du destinataire",
-            "Numéro de téléphone (WhatsApp ou appel)",
-            "Adresse de collecte et adresse de livraison",
-            "Contenu des échanges WhatsApp liés à la commande",
-            "Informations sur l'appareil (type, système d'exploitation) pour l'application",
+            "Identité et contact : nom, email, numéro de téléphone",
+            "Profil créateur : activité, objectifs, préférences de contenu",
+            "Contenus soumis : liens ou textes fournis pour l’analyse IA, idées, scripts",
+            "Usage des formations : progression, modules consultés",
+            "Données techniques : type d’appareil, logs de connexion, adresse IP (sécurité et support)",
         ],
     },
     {
         number: "02",
         title: "Comment nous utilisons vos données",
-        body: "Vos données sont utilisées exclusivement pour :",
+        body: "Vos données sont utilisées pour :",
         items: [
-            "Traiter et coordonner votre livraison de bout en bout",
-            "Vous envoyer des notifications de statut (confirmation, en route, livré)",
-            "Résoudre d'éventuels litiges ou incidents de livraison",
-            "Améliorer la qualité et la fiabilité de notre service",
+            "Créer et gérer votre compte",
+            "Fournir les formations et l’outil IA",
+            "Assurer le support et la sécurité du service",
+            "Améliorer le produit de façon agrégée et anonymisée lorsque possible",
         ],
     },
     {
         number: "03",
         title: "Partage de vos données",
-        body: "Nous ne vendons jamais vos données. Elles peuvent être partagées uniquement dans les cas suivants :",
+        body: "Nous ne vendons pas vos données. Elles peuvent être partagées uniquement avec :",
         items: [
-            "Avec le livreur assigné à votre commande (nom, adresse, téléphone)",
-            "Avec nos prestataires techniques hébergeant l'infrastructure (sous accord de confidentialité strict)",
-            "Sur injonction légale d'une autorité compétente camerounaise",
+            "Nos prestataires techniques (hébergement, IA) sous contrat de confidentialité",
+            "Les autorités compétentes si la loi l’exige",
         ],
     },
     {
         number: "04",
         title: "Conservation des données",
-        body: "Nous appliquons une politique de conservation minimale :",
+        body: "Nous conservons vos données le temps nécessaire aux finalités décrites :",
         items: [
-            "Données de commande : conservées 12 mois après la livraison pour gestion des litiges",
-            "Historique des échanges WhatsApp : 6 mois",
-            "Données de compte : jusqu'à la résiliation de votre contrat, puis supprimées sous 30 jours",
+            "Compte actif : pendant la durée de votre utilisation du service",
+            "Après clôture de compte : suppression ou anonymisation sous 30 jours, sauf obligation légale",
+            "Logs techniques : durée limitée pour la sécurité",
         ],
     },
     {
         number: "05",
         title: "Vos droits",
-        body: "Vous disposez à tout moment des droits suivants sur vos données personnelles :",
+        body: "Vous pouvez demander :",
         items: [
-            "Droit d'accès : obtenir une copie de vos données",
-            "Droit de rectification : corriger des informations inexactes",
-            "Droit à l'effacement : demander la suppression de vos données",
-            "Droit d'opposition : refuser certains traitements",
-            "Pour exercer ces droits, contactez-nous via email ou WhatsApp",
+            "L’accès à vos données",
+            "La rectification d’informations inexactes",
+            "L’effacement, dans les limites prévues par la loi",
+            "L’opposition à certains traitements",
+            "Pour exercer ces droits : contact@airge.com",
         ],
     },
     {
         number: "06",
         title: "Modifications de cette politique",
-        body: "Nous pouvons mettre à jour cette politique pour refléter des évolutions légales ou techniques. En cas de modification importante, nous vous informerons par WhatsApp ou email. La date de dernière mise à jour est toujours indiquée en haut de cette page.",
+        body: "Nous pouvons mettre à jour cette politique. En cas de changement important, nous vous en informerons par email ou via la plateforme. La date en tête de page indique la dernière révision.",
         items: [],
     },
 ];

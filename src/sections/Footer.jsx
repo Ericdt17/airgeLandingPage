@@ -2,30 +2,21 @@
  * Footer — navigation from `src/constants/index.js`.
  */
 import { Link } from "react-router-dom";
-import { headerLogo } from "../assets/images";
+import NavBrand from "../components/NavBrand";
 import {
   footerColumns,
   footerCopyright,
-  footerLocales,
   footerSocialLinks,
-  footerTagline,
   footerSpaPaths,
+  footerTagline,
 } from "../constants";
 
 const Footer = () => {
   return (
     <footer>
-      <div className='max-container grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4 lg:gap-8'>
+      <div className='max-container grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3 lg:gap-8'>
         <div className='flex flex-col'>
-          <Link to='/' className='inline-block w-fit'>
-            <img
-              src={headerLogo}
-              alt='LivSight'
-              width={160}
-              height={48}
-              className='h-10 sm:h-12 w-auto max-w-[140px] sm:max-w-[180px] object-contain'
-            />
-          </Link>
+          <NavBrand />
           <p className='mt-6 max-w-xs font-montserrat text-base leading-6 text-airge-muted'>
             {footerTagline}
           </p>
@@ -75,31 +66,10 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className='max-container mt-8 sm:mt-12 flex flex-col gap-4 border-t border-airge-border pt-6 sm:pt-8 sm:flex-row sm:items-center sm:justify-between'>
+      <div className='max-container mt-8 border-t border-airge-border pt-6 sm:mt-12 sm:pt-8'>
         <p className='font-montserrat text-xs leading-4 text-airge-muted'>
           {footerCopyright}
         </p>
-        <div className='flex items-center gap-3 sm:gap-6'>
-          {footerLocales.map(({ code, label, href, active }) =>
-            active ? (
-              <span
-                key={code}
-                className='font-montserrat text-xs font-bold text-airge-primary'
-                aria-current='page'
-              >
-                {label}
-              </span>
-            ) : (
-              <a
-                key={code}
-                href={href}
-                className='font-montserrat text-xs font-bold text-airge-muted opacity-70 transition-opacity hover:opacity-100 hover:text-airge-foreground'
-              >
-                {label}
-              </a>
-            ),
-          )}
-        </div>
       </div>
     </footer>
   );

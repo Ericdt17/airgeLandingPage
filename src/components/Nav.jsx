@@ -1,17 +1,19 @@
 import { hamburger } from "../assets/icons";
 import NavBrand from "./NavBrand";
-import WhatsAppIcon from "./WhatsAppIcon";
 import {
+  navCtaHref,
   navCtaLabel,
   navLinks,
   navMobileMenuCloseLabel,
   navMobileMenuOpenLabel,
-  whatsappCtaHref,
 } from "../constants";
 import { useEffect, useState } from "react";
 
+const isExternalHref = (href) => /^https?:\/\//i.test(href);
+
 const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const ctaExternal = isExternalHref(navCtaHref);
 
   useEffect(() => {
     const onKeyDown = (e) => {
@@ -27,6 +29,9 @@ const Nav = () => {
       window.removeEventListener("resize", onResize);
     };
   }, []);
+
+  const ctaClassName =
+    "inline-flex items-center justify-center gap-2 rounded-full bg-airge-primary px-6 py-3 text-sm font-semibold font-montserrat text-airge-ink shadow-cta-final hover:bg-airge-primary-hover transition-colors";
 
   return (
     <header className='sticky top-0 z-50 w-full border-b border-airge-border bg-airge-bg/90 backdrop-blur-md'>
@@ -48,12 +53,10 @@ const Nav = () => {
 
         <div className='flex items-center gap-3'>
           <a
-            href={whatsappCtaHref}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='max-lg:hidden inline-flex items-center gap-2 rounded-full bg-airge-primary px-6 py-3 text-sm font-semibold font-montserrat text-airge-ink shadow-cta-final hover:bg-airge-primary-hover transition-colors'
+            href={navCtaHref}
+            {...(ctaExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            className={`max-lg:hidden ${ctaClassName}`}
           >
-            <WhatsAppIcon className="h-4 w-4 shrink-0" />
             {navCtaLabel}
           </a>
 
@@ -93,13 +96,11 @@ const Nav = () => {
               </ul>
 
               <a
-                href={whatsappCtaHref}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='inline-flex items-center justify-center gap-2 rounded-full bg-airge-primary px-6 py-3 text-sm font-semibold font-montserrat text-airge-ink shadow-cta-final hover:bg-airge-primary-hover transition-colors'
+                href={navCtaHref}
+                {...(ctaExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                className={ctaClassName}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <WhatsAppIcon className="h-4 w-4 shrink-0" />
                 {navCtaLabel}
               </a>
             </div>

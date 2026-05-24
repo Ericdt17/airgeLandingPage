@@ -1,6 +1,5 @@
 /**
- * Politique cookies — contenu éditable.
- * Aligner `legalCookiesPath` avec la route dans `App.jsx`.
+ * Politique cookies — site marketing AIRGÉ.
  */
 
 export const legalCookiesPath = "/legal/cookies";
@@ -10,12 +9,11 @@ export const cookiesPageTitle = "Politique cookies";
 export const cookiesPageUpdated = "Dernière mise à jour : avril 2026";
 
 export const cookiesPageIntro =
-    "Cette page décrit comment le site LivSight utilise les cookies et comment vous pouvez gérer vos préférences.";
+    "Cette page décrit comment le site AIRGÉ (video-story.com) utilise les cookies et comment vous pouvez gérer vos préférences.";
 
 export const cookiesContactIntro =
-    "Pour toute question sur cette politique ou vos données, notre équipe est disponible :";
+    "Pour toute question sur cette politique, contactez-nous par email :";
 
-/** Colonnes du tableau Art. 2 (ordre d’affichage) */
 export const cookieRecapColumnLabels = {
     type: "Type",
     name: "Nom",
@@ -24,39 +22,37 @@ export const cookieRecapColumnLabels = {
     active: "Actif",
 };
 
-/** Lignes du récapitulatif cookies (Art. 2) */
 export const cookieRecapRows = [
     {
         type: "Technique",
-        name: "session_id",
-        role: "Maintenir la session de navigation",
+        name: "session / auth",
+        role: "Maintenir la session de navigation sur le site",
         duration: "Fin de session",
         active: "Oui",
     },
     {
         type: "Préférence",
-        name: "lang_pref",
-        role: "Mémoriser la langue choisie",
-        duration: "30 jours",
+        name: "prefs",
+        role: "Mémoriser des choix d’affichage (si applicable)",
+        duration: "12 mois",
         active: "Oui",
     },
     {
         type: "Analytics",
         name: "_ga / _gid",
-        role: "Statistiques de visite anonymes (Google Analytics)",
+        role: "Mesure d’audience anonymisée (si activée)",
         duration: "2 ans / 24h",
         active: "Optionnel",
     },
     {
         type: "Publicitaire",
         name: "—",
-        role: "Ciblage, retargeting, revente de données",
+        role: "Ciblage ou revente de données",
         duration: "—",
         active: "Non utilisé",
     },
 ];
 
-/** Art. 5 — raccourcis navigateurs (texte après l’intro) */
 export const cookieBrowserHints = [
     {
         browser: "Chrome",
@@ -84,7 +80,7 @@ export const cookieGroups = [
                 art: 1,
                 title: "Définition",
                 paragraphs: [
-                    "Un cookie est un petit fichier texte déposé sur votre appareil lorsque vous visitez un site web. Il permet au site de mémoriser certaines informations entre deux visites. Les cookies ne contiennent pas de virus et ne peuvent pas accéder à vos fichiers personnels.",
+                    "Un cookie est un petit fichier texte déposé sur votre appareil lorsque vous visitez un site. Il permet de mémoriser certaines informations entre deux visites. Les cookies ne contiennent pas de virus et ne peuvent pas accéder à vos fichiers personnels.",
                 ],
             },
         ],
@@ -96,7 +92,7 @@ export const cookieGroups = [
                 art: 2,
                 title: "Récapitulatif des cookies",
                 paragraphs: [
-                    "Le site LivSight utilise uniquement des cookies strictement nécessaires à son bon fonctionnement. Aucun cookie publicitaire ou de profilage n'est déposé.",
+                    "Le site marketing AIRGÉ utilise des cookies strictement nécessaires et, le cas échéant, des cookies de mesure d’audience avec votre consentement. Aucun cookie publicitaire ou de profilage n’est déposé.",
                 ],
                 showCookieTable: true,
             },
@@ -104,15 +100,14 @@ export const cookieGroups = [
                 art: 3,
                 title: "Cookies techniques (obligatoires)",
                 paragraphs: [
-                    "Ces cookies sont indispensables au fonctionnement du site. Ils permettent la navigation, la mémorisation de vos préférences de langue et la sécurité de votre session. Ils ne collectent aucune information personnelle identifiable et ne peuvent pas être désactivés sans altérer votre expérience de navigation.",
+                    "Ces cookies sont indispensables au fonctionnement du site (navigation, sécurité de session). Ils ne peuvent pas être désactivés sans altérer votre expérience.",
                 ],
             },
             {
                 art: 4,
                 title: "Cookies analytics (optionnels)",
                 paragraphs: [
-                    "Si activés, ces cookies permettent de mesurer le trafic du site de façon anonyme et agrégée (pages visitées, durée de visite, source du trafic). Ces données sont utilisées uniquement pour améliorer l'expérience utilisateur du site. Aucune donnée personnelle identifiable n'est transmise à un tiers à des fins commerciales.",
-                    "Ces cookies ne sont activés qu'avec votre consentement explicite via la bannière de gestion des cookies à votre première visite.",
+                    "S’ils sont activés, ces cookies permettent de mesurer le trafic de façon agrégée pour améliorer le site. Aucune revente de données à des fins publicitaires.",
                 ],
             },
         ],
@@ -124,7 +119,7 @@ export const cookieGroups = [
                 art: 5,
                 title: "Gérer vos préférences",
                 paragraphs: [
-                    "Vous pouvez à tout moment modifier vos préférences de cookies depuis les paramètres de votre navigateur. Voici comment procéder selon votre navigateur :",
+                    "Vous pouvez modifier vos préférences depuis les paramètres de votre navigateur :",
                 ],
                 showBrowserHints: true,
             },
@@ -132,14 +127,14 @@ export const cookieGroups = [
                 art: 6,
                 title: "Désactivation & conséquences",
                 paragraphs: [
-                    "La désactivation des cookies techniques peut entraîner un dysfonctionnement partiel du site (perte de session, rechargement des préférences à chaque visite). La désactivation des cookies analytics n'affecte pas votre navigation. LivSight ne peut être tenu responsable des limitations d'expérience liées à la désactivation des cookies par l'utilisateur.",
+                    "La désactivation des cookies techniques peut limiter certaines fonctions du site. La désactivation des cookies analytics n’affecte en général pas la navigation.",
                 ],
             },
             {
                 art: 7,
                 title: "Mise à jour de cette politique",
                 paragraphs: [
-                    "Cette politique peut être mise à jour à tout moment pour refléter l'évolution des technologies utilisées ou de la réglementation applicable. La date de dernière mise à jour est indiquée en bas de page. Nous vous encourageons à la consulter régulièrement.",
+                    "Cette politique peut être mise à jour pour refléter l’évolution du site ou de la réglementation. La date en tête de page indique la dernière révision.",
                 ],
             },
         ],
