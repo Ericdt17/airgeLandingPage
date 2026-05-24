@@ -1,10 +1,9 @@
-import { CpuChipIcon, UserGroupIcon } from "@heroicons/react/24/outline";
-import { impactFeatures, impactHeadingLines, impactStats } from "../constants";
-
-const iconMap = {
-  agents: UserGroupIcon,
-  tech: CpuChipIcon,
-};
+import {
+  impactBlocks,
+  impactClosing,
+  impactHeadline,
+  impactIntro,
+} from "../constants";
 
 const MetriquesCles = () => {
   return (
@@ -20,57 +19,39 @@ const MetriquesCles = () => {
           aria-hidden='true'
         />
 
-        <div className='grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16'>
-          <div>
-            <h2
-              id='impact-heading'
-              className='font-montserrat text-2xl font-bold leading-snug text-airge-foreground sm:text-3xl sm:leading-tight md:text-4xl lg:text-[48px] lg:leading-[48px]'
+        <h2
+          id='impact-heading'
+          className='mx-auto max-w-4xl text-center font-montserrat text-2xl font-bold leading-snug text-airge-foreground sm:text-3xl sm:leading-tight md:text-4xl lg:text-[44px] lg:leading-[48px]'
+        >
+          {impactHeadline}
+        </h2>
+
+        <p className='mx-auto mt-4 max-w-3xl text-center font-montserrat text-base leading-7 text-airge-muted sm:mt-6 sm:text-lg sm:leading-8'>
+          {impactIntro}
+        </p>
+
+        <ul className='mt-10 grid list-none grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:gap-8'>
+          {impactBlocks.map((block, index) => (
+            <li
+              key={block.title}
+              className='rounded-3xl border border-airge-border bg-airge-surface/60 p-6 backdrop-blur-md sm:p-8'
             >
-              {impactHeadingLines.map((line) => (
-                <span key={line} className='block'>
-                  {line}
-                </span>
-              ))}
-            </h2>
+              <p className='font-montserrat text-xs font-semibold uppercase tracking-wide text-airge-primary'>
+                {index + 1}
+              </p>
+              <h3 className='mt-3 font-montserrat text-lg font-bold leading-snug text-airge-foreground sm:text-xl'>
+                {block.title}
+              </h3>
+              <p className='mt-3 font-montserrat text-sm leading-relaxed text-airge-muted sm:text-base sm:leading-7'>
+                {block.description}
+              </p>
+            </li>
+          ))}
+        </ul>
 
-            <ul className='mt-10 space-y-8'>
-              {impactFeatures.map((item) => {
-                const Icon = iconMap[item.iconId];
-                return (
-                  <li key={item.title} className='flex items-start gap-4'>
-                    <div className='mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-airge-primary/15'>
-                      <Icon className='h-5 w-5 text-airge-primary' aria-hidden='true' />
-                    </div>
-                    <div>
-                      <p className='font-montserrat text-lg font-bold text-airge-foreground'>
-                        {item.title}
-                      </p>
-                      <p className='mt-1 max-w-xl font-montserrat text-sm leading-6 text-airge-muted'>
-                        {item.description}
-                      </p>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
-          <ul className='grid list-none grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6'>
-            {impactStats.map((stat) => (
-              <li
-                key={stat.label}
-                className='rounded-3xl border border-airge-border bg-airge-surface/60 p-6 backdrop-blur-md'
-              >
-                <p className='font-montserrat text-2xl font-extrabold text-airge-primary sm:text-[30px] sm:leading-9'>
-                  {stat.value}
-                </p>
-                <p className='mt-3 font-montserrat text-xs font-medium uppercase tracking-[0.14em] text-airge-muted'>
-                  {stat.label}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <p className='mx-auto mt-10 max-w-3xl rounded-2xl border border-airge-border bg-airge-surface/60 px-6 py-5 text-center font-montserrat text-base leading-7 text-airge-foreground backdrop-blur-md sm:mt-12 sm:text-lg sm:leading-8'>
+          {impactClosing}
+        </p>
       </div>
     </section>
   );

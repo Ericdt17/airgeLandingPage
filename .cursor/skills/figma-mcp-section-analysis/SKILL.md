@@ -1,12 +1,12 @@
 ---
 name: figma-mcp-section-analysis
-description: Analyze a Figma design/section using the Figma MCP and produce an implementation-ready breakdown for this landing-page template (sections concerned, reuse vs create components, assets/icons with filenames and export specs, tokens). Use when the user shares a Figma URL, mentions Figma MCP, or asks to analyze a design/section for implementation.
+description: Analyze a Figma design/section using the Figma MCP and produce an implementation-ready breakdown for the AIRGÉ landing (sections, reuse vs create, assets/icons, airge-* tokens). Use when the user shares a Figma URL or asks to analyze a design for implementation.
 ---
 
-# Figma MCP section analysis (template-safe)
+# Figma MCP section analysis (AIRGÉ)
 
 ## Purpose
-Turn a Figma page/section into an implementation-ready plan **without refactoring** this template’s architecture or responsiveness.
+Turn a Figma page/section into an implementation-ready plan **without refactoring** layout or home section order in `src/pages/Landing.jsx`.
 
 ## Preconditions
 - The user provides a Figma link (design/board/make) or a fileKey + nodeId.
@@ -21,17 +21,17 @@ Turn a Figma page/section into an implementation-ready plan **without refactorin
 ### 2) Map to this repo (reuse-first)
 - Identify which parts map to existing sections in `src/sections/*`.
 - Identify reusable components in `src/components/*` before proposing new ones.
-- Avoid changing section order in `src/App.jsx` unless explicitly requested.
+- Home section order: `src/pages/Landing.jsx` — do not reorder unless explicitly requested.
 
 ### 3) Output the required markdown breakdown
-Follow the repo’s rule:
-- `.cursor/rules/figma-analysis-section-breakdown.mdc`
+Follow the repo rule:
+- `.cursor/rules/figma-mcp.mdc`
 
 Also follow:
 - `ICONS_CANVA_GUIDE.md` for icon sizing/export/naming conventions
 
 ### 4) Include “implementation notes” only when needed
-- Call out any required Tailwind token tweaks in `tailwind.config.js` (prefer token changes over one-off styles).
+- Call out token tweaks in `src/index.css` (`:root`) and `tailwind.config.js` (`airge-*`; no one-off hex in JSX).
 - Call out any anchor/id changes needed so `navLinks` remain accurate.
 
 ## Output template (copy/paste)

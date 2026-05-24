@@ -1,18 +1,19 @@
 ---
-description: Baseline accessibility requirements for UI changes
+description: Baseline a11y for UI and interactive changes
 globs: src/**/*.{js,jsx}
 alwaysApply: false
 ---
 
 # Accessibility baseline
 
-When changing UI copy, assets, or components:
+- Meaningful `alt` on informative images; `alt=""` + `aria-hidden` for decorative-only.
+- FAQ / accordions: `aria-expanded`, `aria-controls`, `role="region"` (see `Faq.jsx`).
+- Section headings: use `aria-labelledby` when the visible `h2` has an `id`.
+- CTA/link text must be descriptive (not “Cliquez ici”).
+- Preserve keyboard focus and visible focus styles; do not trap focus in mobile nav.
+- External links: `rel="noopener noreferrer"` when `target="_blank"`.
 
-- Ensure meaningful `alt` text for non-decorative images (especially logos and hero/product images).
-- If an image is decorative, use an empty alt (`alt=""`) and avoid redundant screen-reader noise.
-- Keep CTA/button/link text descriptive; avoid “Click here”.
-- Do not remove focus-visible affordances or create keyboard traps.
+## References
 
-## Repo references (examples)
-- Logo image alt text: `src/components/Nav.jsx`
-- Hero imagery: `src/sections/Hero.jsx`
+- `src/sections/Faq.jsx`, `src/sections/MetriquesCles.jsx` (heading ids)
+- `src/components/Nav.jsx` (mobile menu labels from constants)

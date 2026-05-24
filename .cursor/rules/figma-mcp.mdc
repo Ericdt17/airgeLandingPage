@@ -1,0 +1,45 @@
+---
+description: Figma MCP analysis output — reuse-first, AIRGÉ section mapping
+alwaysApply: false
+---
+
+# Figma MCP → AIRGÉ implementation plan
+
+Use when analyzing Figma with the MCP. Produce an **implementation-ready markdown breakdown**. Prefer editing existing `src/sections/*` and `src/components/*` — see `project-conventions.mdc`.
+
+Skill: `.cursor/skills/figma-mcp-section-analysis/SKILL.md`  
+Icons: `ICONS_CANVA_GUIDE.md`, barrel `src/assets/icons/index.js`
+
+## Required output
+
+### Sections concerned
+
+- Map to `src/sections/*` and anchor `id` (home: `#home`, `#probleme`, `#solution`, `#fonctionnalites`, `#impact`, `#tarifs`, `#faq`, `#cta-final`).
+
+### Components
+
+Per section:
+
+- **Reuse**: `src/components/*` (path)
+- **Create**: only if necessary (name + path)
+- **Props**: brief data shape
+
+### Assets
+
+- Type, target path (`src/assets/images/*` or `src/assets/icons/*`), filename (kebab-case), usage.
+
+### Icons required (if any)
+
+Per icon: purpose, filename, `src/assets/icons/`, where used, Figma node name, export spec (default **24×24**, ~2px padding, **2px stroke** outline).
+
+### Tokens & layout
+
+- Tailwind/`index.css` token updates (`airge-*`) — no vague “update styling”.
+- Note if `navLinks` / section `id` must stay in sync.
+
+## Guardrails
+
+- **Reuse** over **Create** when a section/component already exists.
+- No new layout system; keep `padding*`, `max-container`, breakpoints.
+- Home section order lives in `src/pages/Landing.jsx` — do not reorder without explicit request.
+- Hero: ship without new hero image unless requested.

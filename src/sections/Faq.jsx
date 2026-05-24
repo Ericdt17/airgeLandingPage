@@ -17,7 +17,7 @@ const Faq = () => {
           {faqHeading}
         </h2>
         {faqSubheading ? (
-          <p className='mx-auto mt-3 max-w-xl text-center font-montserrat text-base leading-6 text-airge-muted'>
+          <p className='mx-auto mt-3 max-w-3xl text-center font-montserrat text-base leading-7 text-airge-muted sm:text-lg sm:leading-8'>
             {faqSubheading}
           </p>
         ) : null}
@@ -51,7 +51,7 @@ const Faq = () => {
                     role='region'
                     aria-labelledby={`faq-trigger-${index}`}
                     className={`overflow-hidden transition-all duration-200 ${
-                      isOpen ? "max-h-96" : "max-h-0"
+                      isOpen ? "max-h-[32rem]" : "max-h-0"
                     }`}
                   >
                     <div className='px-6 pb-6 pt-0'>

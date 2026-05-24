@@ -1,27 +1,24 @@
 ---
-description: Asset organization and import hygiene
+description: Import assets via barrels; icons vs images paths
 globs: src/**/*.{js,jsx}
 alwaysApply: false
 ---
 
-# Asset hygiene (logos/icons/images)
+# Asset hygiene
 
-- Store icons in `src/assets/icons/*` and images/logos in `src/assets/images/*`.
-- Prefer importing assets via the barrel files:
-  - `src/assets/icons/index.js`
-  - `src/assets/images/index.js`
-- Avoid ad-hoc string paths to assets from JSX when a module import works.
+- Icons: `src/assets/icons/*` → import from `src/assets/icons/index.js`
+- Images: `src/assets/images/*` → import from `src/assets/images/index.js`
+- Avoid raw string paths in JSX when a barrel export exists.
 
-## Repo references (examples)
-- Logos: `src/assets/images/header-logo.svg` (barrel: `headerLogo`)
-- Nav logo usage: `src/components/Nav.jsx`
-- Social icons data: `src/constants/index.js` (`footerSocialLinks`)
+## AIRGÉ specifics
 
-## Filenames and diffs
-- Prefer keeping existing filenames if it reduces changes (swap the file contents instead).
-- If filenames must change, update barrel exports and all imports consistently.
+- Nav brand is **text** (`NavBrand.jsx`), not `headerLogo`, unless the user adds a logo asset.
+- Social icons: data in `src/constants/index.js` (`footerSocialLinks`), files in `src/assets/icons/`.
+- Section icons: prefer **Heroicons** (`@heroicons/react`) when already used in that section.
 
-## Reporting
-Include an **Assets** section in the summary:
-- added/removed/renamed files
-- where each asset is used (section/component)
+## Filenames
+
+- kebab-case for new SVGs; keep existing filenames when swapping file contents to minimize diffs.
+- Renames: update barrel exports and all imports.
+
+Summaries: list assets added/removed/renamed and where used.

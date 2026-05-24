@@ -1,15 +1,12 @@
 import {
-  BanknotesIcon,
-  ChatBubbleLeftRightIcon,
-  InboxStackIcon,
-} from "@heroicons/react/24/outline";
-import { problemEyebrow, problemHeadline, problemPoints } from "../constants";
-
-const iconMap = {
-  "chat-bubble": ChatBubbleLeftRightIcon,
-  inbox: InboxStackIcon,
-  banknotes: BanknotesIcon,
-};
+  problemEyebrow,
+  problemHeadline,
+  problemIntro,
+  problemPainPoints,
+  problemPivot,
+  problemResult,
+  problemTransition,
+} from "../constants";
 
 const LeProbleme = () => {
   return (
@@ -19,35 +16,39 @@ const LeProbleme = () => {
     >
       <div className='absolute inset-0 bg-hero-grid bg-[length:40px_40px] opacity-[0.12]' aria-hidden='true' />
       <div className='relative max-container px-6 py-10 sm:px-10 sm:py-14 lg:px-14'>
-        <p className='font-montserrat text-sm font-semibold uppercase tracking-[1.4px] text-airge-primary'>
+        <p className='font-montserrat text-sm font-semibold text-airge-primary'>
           {problemEyebrow}
         </p>
-        <h2 className='mt-4 max-w-4xl font-montserrat text-2xl font-bold leading-snug text-airge-foreground sm:text-3xl sm:leading-tight md:text-4xl lg:text-[48px] lg:leading-[48px]'>
+        <h2 className='mt-4 max-w-4xl font-montserrat text-2xl font-bold leading-snug text-airge-foreground sm:text-3xl sm:leading-tight md:text-4xl lg:text-[44px] lg:leading-[48px]'>
           {problemHeadline}
         </h2>
         <div className='mt-4 h-1.5 w-24 rounded-full bg-airge-primary' aria-hidden='true' />
 
-        <ul className='mt-10 grid list-none grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:mt-14 lg:grid-cols-3 lg:gap-8'>
-          {problemPoints.map(({ iconId, title, description }) => {
-            const Icon = iconMap[iconId];
-            return (
+        <div className='mt-8 max-w-3xl space-y-5'>
+          <p className='font-montserrat text-base leading-7 text-airge-muted sm:text-lg'>
+            {problemIntro}
+          </p>
+          <p className='font-montserrat text-base font-semibold leading-7 text-airge-foreground sm:text-lg'>
+            {problemPivot}
+          </p>
+          <ul className='list-none space-y-2 border-l-2 border-airge-border pl-5'>
+            {problemPainPoints.map((line) => (
               <li
-                key={title}
-                className='flex flex-col rounded-3xl border border-airge-border bg-airge-surface px-6 py-7 shadow-soft-card'
+                key={line}
+                className='font-montserrat text-base leading-7 text-airge-muted sm:text-lg'
               >
-                <div className='flex h-12 w-12 items-center justify-center rounded-2xl bg-airge-bg-deep/40'>
-                  <Icon className='h-6 w-6 text-airge-primary' aria-hidden='true' />
-                </div>
-                <h3 className='mt-5 font-montserrat text-lg font-bold text-airge-foreground'>
-                  {title}
-                </h3>
-                <p className='mt-3 font-montserrat text-sm leading-relaxed text-airge-muted'>
-                  {description}
-                </p>
+                {line}
               </li>
-            );
-          })}
-        </ul>
+            ))}
+          </ul>
+          <p className='font-montserrat text-base font-semibold leading-7 text-airge-foreground sm:text-lg'>
+            {problemResult}
+          </p>
+        </div>
+
+        <p className='mt-10 max-w-3xl rounded-2xl border border-airge-border bg-airge-surface px-6 py-5 font-montserrat text-base leading-7 text-airge-foreground sm:text-lg sm:leading-8'>
+          {problemTransition}
+        </p>
       </div>
     </section>
   );

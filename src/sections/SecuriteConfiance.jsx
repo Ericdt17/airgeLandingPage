@@ -1,4 +1,9 @@
-import { howItWorksHeading, howItWorksSteps } from "../constants";
+import {
+  howItWorksClosing,
+  howItWorksHeading,
+  howItWorksIntro,
+  howItWorksSteps,
+} from "../constants";
 
 const SecuriteConfiance = () => {
   return (
@@ -16,11 +21,15 @@ const SecuriteConfiance = () => {
           {howItWorksHeading}
         </h2>
 
-        <ul className='mt-10 grid list-none grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:mt-14 lg:grid-cols-3 lg:gap-8'>
+        <p className='mx-auto mt-4 max-w-2xl text-center font-montserrat text-base leading-7 text-airge-muted sm:mt-6 sm:text-lg'>
+          {howItWorksIntro}
+        </p>
+
+        <ul className='mt-10 grid list-none grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:mt-14 lg:gap-8'>
           {howItWorksSteps.map((step) => (
             <li
               key={step.number}
-              className='relative overflow-hidden rounded-3xl border border-airge-border bg-airge-surface px-8 py-9 shadow-soft-card'
+              className='relative overflow-hidden rounded-3xl border border-airge-border bg-airge-surface px-6 py-8 shadow-soft-card sm:px-8 sm:py-9'
             >
               <div className='flex h-12 w-12 items-center justify-center rounded-full bg-airge-bg-deep'>
                 <span className='font-montserrat text-lg font-bold text-airge-primary'>
@@ -28,7 +37,7 @@ const SecuriteConfiance = () => {
                 </span>
               </div>
 
-              <h3 className='mt-5 font-montserrat text-xl font-bold leading-snug text-airge-foreground sm:text-2xl'>
+              <h3 className='mt-5 font-montserrat text-lg font-bold leading-snug text-airge-foreground sm:text-xl'>
                 {step.title}
               </h3>
 
@@ -38,6 +47,10 @@ const SecuriteConfiance = () => {
             </li>
           ))}
         </ul>
+
+        <p className='mx-auto mt-10 max-w-3xl rounded-2xl border border-airge-border bg-airge-surface px-6 py-5 text-center font-montserrat text-base leading-7 text-airge-foreground sm:mt-12 sm:text-lg sm:leading-8'>
+          {howItWorksClosing}
+        </p>
       </div>
     </section>
   );

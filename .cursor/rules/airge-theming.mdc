@@ -1,0 +1,32 @@
+---
+description: AIRGÉ design tokens — CSS variables and Tailwind airge-*
+alwaysApply: true
+---
+
+# AIRGÉ theming (tokens only)
+
+## Source of truth
+
+- **CSS variables**: `src/index.css` (`:root` — `--airge-bg`, `--airge-primary`, etc.)
+- **Tailwind**: `tailwind.config.js` maps `airge-*` colors/shadows to `var(--airge-*)`
+- **Grid**: `backgroundImage` → `hero-grid` → class `bg-hero-grid`
+
+## Usage
+
+- Prefer **`airge-*`** utilities on new/edited UI: `bg-airge-bg`, `text-airge-foreground`, `text-airge-muted`, `bg-airge-primary`, `text-airge-ink`, `border-airge-border`, `bg-airge-surface`.
+- Primary buttons: `bg-airge-primary text-airge-ink hover:bg-airge-primary-hover`.
+- Do not add new one-off hex colors, arbitrary inline colors, or custom CSS rules for brand theming.
+
+## Legacy token names
+
+- `brand-blue`, `slate-gray`, `coral-red`, etc. still map to AIRGÉ values for older pages.
+- Prefer `airge-*` on the home page and new work; rename legacy tokens only as a **single coordinated** change.
+
+## Base styles
+
+- Body background: `background-color: var(--airge-bg)` in `@layer base` — **do not** `@apply bg-airge-bg` (PostCSS/Tailwind build issue).
+
+## Fonts
+
+- `font-montserrat`, `font-palanquin` via Tailwind config.
+- Shared layout: `.padding`, `.padding-x`, `.max-container`, `.info-text` in `src/index.css`.

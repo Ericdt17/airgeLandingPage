@@ -1,0 +1,47 @@
+---
+description: AIRGÉ landing — architecture, layout guardrails, minimal diffs
+alwaysApply: true
+---
+
+# AIRGÉ landing — project conventions
+
+Marketing SPA for **AIRGÉ** (dark-first, creator/content platform). Preserve the existing **folder layout**, **Tailwind patterns**, and **mobile responsiveness** unless the user explicitly asks otherwise.
+
+## Home page (`src/pages/Landing.jsx`)
+
+Section order (do not reorder without explicit request):
+
+1. `Nav` → `Hero` (`#home`)
+2. `LeProbleme` (`#probleme`)
+3. `Solution` (`#solution`)
+4. `SecuriteConfiance` (`#fonctionnalites` — Comment ça marche)
+5. `MetriquesCles` (`#impact`)
+6. `Tarifs` (`#tarifs`)
+7. `Faq` (`#faq`)
+8. `CtaFinal` (`#cta-final`)
+9. `Footer`
+
+`TrustedBy`, `Promotion`, `Temoignages` are **not** on the home page.
+
+## Preferred changes
+
+- Copy and data in `src/constants/index.js` (or a single brand module).
+- Section styling via existing `airge-*` Tailwind classes and shared utilities (`padding*`, `max-container`, `bg-hero-grid`).
+- Assets via `src/assets/icons/index.js` and `src/assets/images/index.js`.
+- SEO strings in `src/components/SEO.jsx` and per-page `SEO` usage.
+
+## Avoid unless explicitly requested
+
+- Reorganizing `src/components`, `src/sections`, `src/assets`, `src/constants`.
+- Changing home section order or rewriting layout systems (`flex`/`grid` + `sm`/`lg`/`wide` intent).
+- New frameworks, global state libraries, or non-Tailwind CSS for theming.
+- One-off hex colors or inline styles for brand look (use tokens — see `airge-theming.mdc`).
+
+## Visual motif
+
+- Reuse **`bg-hero-grid`** for the teal grid background; do not add new background CSS for the same effect.
+- Hero: do **not** block on hero imagery unless the user asks — ship text/CTAs with the grid.
+
+## Secondary routes
+
+- `/legal/*`, `/entreprise/*`, `/plateforme/*` may still contain **legacy template copy** (ex. LivSight, livraison). Update when editing those files; grep leftovers before finishing a rebrand-related task.

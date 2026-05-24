@@ -425,32 +425,31 @@ export const heroCtaSecondaryHref = "#fonctionnalites";
 export const heroMicrotext =
     "Pour créateurs, étudiants, coachs, freelances, artisans et petits business.";
 
-export const problemEyebrow = "Le défi logistique";
+export const problemEyebrow = "Le vrai blocage";
 
 export const problemHeadline =
-    "Gérer ses livraisons ne devrait pas être un chaos";
+    "Tu as quelque chose à vendre ou à montrer, mais tu ne sais pas toujours comment en parler.";
 
-/** iconId maps to @heroicons/react/24/outline in LeProbleme.jsx */
-export const problemPoints = [
-    {
-        iconId: "chat-bubble",
-        title: "Gestion Manuelle",
-        description:
-            "Les échanges WhatsApp interminables sans structure causent des retards de traitement critiques.",
-    },
-    {
-        iconId: "inbox",
-        title: "Commandes Perdues",
-        description:
-            "L'absence d'un système centralisé mène inévitablement à l'oubli de colis et à des pertes financières.",
-    },
-    {
-        iconId: "banknotes",
-        title: "Pertes de Revenus",
-        description:
-            "Chaque erreur de livraison est un client qui ne reviendra pas et un coût opérationnel inutile.",
-    },
+export const problemIntro =
+    "Beaucoup de personnes sont bonnes dans ce qu’elles font : coiffure, couture, commerce, formation, service, création de contenu ou business en ligne.";
+
+export const problemPivot =
+    "Mais quand il faut publier, tout devient compliqué.";
+
+export const problemPainPoints = [
+    "On ne sait pas quoi dire.",
+    "On ne sait pas comment commencer une vidéo.",
+    "On poste parfois sans stratégie.",
+    "On fait des vues, mais sans clients.",
+    "On veut vendre, mais on a peur de forcer.",
+    "On veut être visible, mais on ne sait pas comment construire une vraie audience.",
 ];
+
+export const problemResult =
+    "Résultat : ton talent, ton produit ou ton business peut rester invisible.";
+
+export const problemTransition =
+    "AIRGÉ existe pour t’aider à transformer tes idées, ton savoir-faire et ton activité en contenu clair, régulier et utile.";
 
 export const ecosystemEyebrow = "L'Écosystème LivSight";
 
@@ -477,44 +476,73 @@ export const ecosystemShowcases = [
     },
 ];
 
-export const solutionEyebrow = "La solution LivSight";
+export const solutionEyebrow = "La solution";
 
-export const solutionHeadlineLines = [
-    "Nous structurons vos",
-    "livraisons pour vous",
-];
+export const solutionHeadline =
+    "AIRGÉ t’aide à transformer tes idées en contenu qui attire, engage et vend.";
 
 export const solutionBody =
-    "Continuez à utiliser WhatsApp comme vous l'aimez, mais profitez de la puissance d'une infrastructure professionnelle en arrière-plan.";
+    "Avec AIRGÉ, tu n’es pas obligé de créer au hasard. La plateforme t’aide à comprendre ce qui marche, à structurer tes vidéos et à apprendre comment utiliser ton contenu pour construire une audience et créer des opportunités.";
 
-export const solutionBullets = [
-    "Organisation automatique de vos messages en bons de commande.",
-    "Visibilité totale sur chaque colis en temps réel.",
-    "Confirmation instantanée envoyée à vos clients finaux.",
+/** Carte visuelle — 3 piliers AIRGÉ (iconId dans Solution.jsx) */
+export const solutionPillars = [
+    {
+        iconId: "ia",
+        title: "Outil IA",
+        description:
+            "Analyse des vidéos d’inspiration pour comprendre les hooks, le storytelling, le rythme et les scènes. Ensuite, tu obtiens des idées et scripts adaptés à ton activité.",
+    },
+    {
+        iconId: "training",
+        title: "Formations",
+        description:
+            "Des formations simples pour apprendre à créer du contenu, développer ton audience, vendre tes offres et attirer des collaborations.",
+    },
+    {
+        iconId: "support",
+        title: "Accompagnement",
+        description:
+            "Un accompagnement pour t’aider dans ta stratégie de contenu, ton community management, ta recherche d’idées et la structure de tes vidéos.",
+    },
 ];
 
+export const solutionClosing =
+    "Le but est simple : t’aider à passer de « je ne sais pas quoi publier » à « je sais quoi dire, comment le dire et pourquoi je le publie. »";
+
 export const howItWorksHeading = "Comment ça marche ?";
+
+export const howItWorksIntro =
+    "AIRGÉ t’accompagne pour apprendre à créer du contenu, construire ton audience et transformer ta visibilité en opportunités. L’outil IA vient ensuite t’aider à pratiquer plus vite et à mieux structurer tes idées.";
 
 export const howItWorksSteps = [
     {
         number: "1",
-        title: "Envoyez vos commandes",
+        title: "Tu apprends les bases",
         description:
-            "Utilisez simplement WhatsApp ou notre application pour nous transmettre les détails. Pas de formulaires complexes.",
+            "Tu découvres comment créer du contenu, trouver ton positionnement, parler de ton activité et comprendre ce qui attire l’attention.",
     },
     {
         number: "2",
-        title: "Nous organisons",
+        title: "Tu construis ta stratégie",
         description:
-            "Notre technologie assigne le livreur le plus proche et optimise le trajet pour une rapidité maximale.",
+            "Avec les formations et l’accompagnement, tu apprends quoi publier, comment organiser tes idées, comment être régulier et comment créer une audience autour de ton profil ou de ton business.",
     },
     {
         number: "3",
-        title: "Suivez tout",
+        title: "Tu utilises l’outil IA pour t’aider",
         description:
-            "Accédez à votre tableau de bord en temps réel. Recevez des notifications de statut et des confirmations de dépôt.",
+            "L’outil AIRGÉ t’aide à analyser des vidéos d’inspiration, comprendre les hooks, structurer tes scripts et trouver de meilleurs angles de contenu.",
+    },
+    {
+        number: "4",
+        title: "Tu publies et tu monétises",
+        description:
+            "Tu appliques ce que tu apprends pour publier plus clairement, attirer des clients, vendre tes offres, créer des collaborations ou obtenir des brand deals.",
     },
 ];
+
+export const howItWorksClosing =
+    "AIRGÉ ne te donne pas seulement des idées : la plateforme t’aide à apprendre, pratiquer et transformer ton contenu en vraie opportunité.";
 
 export const keyMetrics = [
     {
@@ -534,32 +562,37 @@ export const keyMetrics = [
     },
 ];
 
-export const impactHeadingLines = [
-    "Une équipe formée + une",
-    "technologie puissante",
-];
+export const impactHeadline =
+    "Le contenu peut devenir une vraie source d’opportunités et de revenus.";
 
-export const impactFeatures = [
+export const impactIntro =
+    "Quand tu sais quoi publier et comment parler de ce que tu fais, ton contenu ne sert plus seulement à faire des vues. Il peut t’aider à attirer des clients, vendre tes offres, obtenir des collaborations et créer de nouvelles sources de revenus.";
+
+export const impactBlocks = [
     {
-        iconId: "agents",
-        title: "Agents formés",
+        title: "Attirer plus de clients",
         description:
-            "Experts en relation client, capables de gérer les situations complexes avec courtoisie et efficacité.",
+            "Ton contenu aide les gens à comprendre ce que tu fais, ce que tu vends et pourquoi ils devraient te faire confiance.",
     },
     {
-        iconId: "tech",
-        title: "Technologie interne",
+        title: "Vendre tes produits ou services",
         description:
-            "Algorithmes d'optimisation de tournées et automatisation des processus pour une scalabilité sans faille.",
+            "Que tu vendes une formation, un service, un produit physique ou une prestation, le bon contenu peut t’aider à mieux présenter ton offre et à générer plus de demandes.",
+    },
+    {
+        title: "Obtenir des collaborations",
+        description:
+            "Une audience engagée peut attirer des marques, des partenaires, des projets rémunérés ou des opportunités professionnelles.",
+    },
+    {
+        title: "Monétiser ton audience",
+        description:
+            "Avec une stratégie claire, ton contenu peut devenir un levier pour vendre, négocier des brand deals, remplir tes formations ou développer ton business.",
     },
 ];
 
-export const impactStats = [
-    { value: "98%", label: "Livraisons à temps" },
-    { value: "15min", label: "Temps de réponse moyen" },
-    { value: "500+", label: "Vendeurs actifs" },
-    { value: "0", label: "Commandes oubliées" },
-];
+export const impactClosing =
+    "Le but n’est pas seulement d’être visible. Le but est d’utiliser ta visibilité pour créer de la confiance, des ventes et des opportunités réelles.";
 
 export const promoBadge = "Offre limitée de lancement";
 
@@ -674,104 +707,96 @@ export const tarifsCtaSecondary = "Contacter un expert";
 
 export const tarifsCtaSecondaryHref = whatsappCtaHref;
 
-export const pricingHeadline = "Tarifs simples & transparents";
+export const pricingHeadline =
+    "Un seul accès pour apprendre et créer plus facilement.";
 
-export const pricingPlans = [
-    {
-        title: "Zone 1",
-        price: "1000",
-        currency: "XAF",
-        bullets: ["0–4 km", "~ 30 minutes", "Suivi de livraison"],
-    },
-    {
-        title: "Zone 2",
-        price: "1500",
-        currency: "XAF",
-        bullets: ["4–8 km", "~ 45 minutes", "Suivi de livraison"],
-    },
-    {
-        title: "Zone 3",
-        price: "2000",
-        currency: "XAF",
-        bullets: ["8–20 km", "~ 1 heure", "Suivi de livraison"],
-    },
-    {
-        title: "Zone 4",
-        price: "2500",
-        currency: "XAF",
-        bullets: ["20–30 km", "~ 1h30", "Suivi de livraison"],
-    },
-];
+export const pricingIntro =
+    "Avec AIRGÉ, tu accèdes aux formations pratiques et à l’outil IA pour apprendre à créer du contenu, construire ton audience et transformer ta visibilité en opportunités.";
+
+export const pricingOffer = {
+    title: "Accès AIRGÉ",
+    subtitle:
+        "Pour ceux qui veulent transformer leur contenu en source de revenus clients, brand deals et ventes.",
+    bullets: [
+        "Des formations pour apprendre à créer du contenu qui attire des clients",
+        "Des leçons sur les hooks, le storytelling et la stratégie de vente",
+        "Des modules pour apprendre à vendre tes produits ou services en ligne",
+        "Des conseils pour décrocher tes premières collaborations rémunérées",
+        "Des scripts et angles de vidéos prêts à publier",
+        "Un outil IA pour analyser des vidéos qui font des ventes",
+        "Des idées de contenu adaptées à ton activité et ton marché",
+        "Des conseils pour construire une audience qui achète",
+    ],
+};
+
+export const pricingValuePhrase =
+    "AIRGÉ ne te donne pas juste un outil. AIRGÉ t’aide à transformer ce que tu publies en clients, en revenus et en opportunités concrètes.";
+
+export const pricingCtaLabel = "Commencer avec AIRGÉ";
+
+export const pricingCtaHref = appCtaHref;
 
 export const faqHeading = "Questions fréquentes";
 
-export const faqSubheading = "";
+export const faqSubheading =
+    "Tu veux commencer à créer du contenu avec plus de clarté ? Voici les réponses aux questions les plus simples.";
 
 export const faqItems = [
     {
-        question: "Dois-je utiliser l'application obligatoirement ?",
+        question: "AIRGÉ, c’est pour qui ?",
         answer:
-            "Non. Vous pouvez continuer à envoyer vos commandes via WhatsApp. L’application est disponible si vous souhaitez une expérience plus guidée et centralisée.",
+            "AIRGÉ est fait pour les débutants, étudiants, créateurs, coachs, freelances, artisans, vendeurs en ligne et petits business qui veulent se faire connaître grâce au contenu.",
     },
     {
-        question: "Comment se font les paiements ?",
+        question: "Est-ce que je dois déjà avoir une audience ?",
         answer:
-            "Selon votre besoin : paiement à la course, facturation périodique ou modes de règlement convenus avec votre équipe. Nous vous guidons lors de l’onboarding.",
+            "Non. Tu peux commencer même si tu pars de zéro. AIRGÉ t’aide à comprendre quoi publier, comment structurer tes idées et comment construire ton audience progressivement.",
     },
     {
-        question: "Quelle est la zone de couverture ?",
+        question: "Qu’est-ce que je reçois avec AIRGÉ ?",
         answer:
-            "Nous couvrons d’abord les zones principales puis étendons progressivement selon la demande. Les zones et délais sont affichés dans la grille de tarifs.",
+            "Tu accèdes à des formations simples pour apprendre à créer du contenu, et à un outil IA pour t’aider à analyser des vidéos, trouver des idées, écrire des hooks et préparer des scripts.",
     },
     {
-        question: "Les colis sont-ils assurés ?",
+        question: "Est-ce que l’outil va créer tout le contenu à ma place ?",
         answer:
-            "Nous appliquons des procédures de suivi et de preuve de livraison. Pour des besoins d’assurance spécifiques, une option peut être mise en place selon le type de colis.",
+            "Non. AIRGÉ t’aide à mieux réfléchir, mieux structurer et gagner du temps. Mais ton histoire, ton activité, ton style et ton effort restent importants.",
     },
     {
-        question: "Comment gérer les retours ?",
+        question: "Est-ce que AIRGÉ sert à copier les vidéos des autres ?",
         answer:
-            "Vous initiez un retour comme une livraison classique. Nous planifions l’enlèvement, le suivi et la confirmation, avec un statut clair à chaque étape.",
+            "Non. Le but n’est pas de copier. AIRGÉ t’aide à comprendre pourquoi certains contenus fonctionnent, puis à créer ta propre version adaptée à toi ou à ton business.",
     },
     {
-        question: "Quels sont vos délais de livraison ?",
+        question: "Est-ce que je peux utiliser AIRGÉ pour vendre mes produits ou services ?",
         answer:
-            "Ils varient selon la zone et la disponibilité des livreurs. En général, l’intra-quartier est le plus rapide et les zones étendues prennent davantage de temps.",
+            "Oui. AIRGÉ t’aide à créer du contenu pour présenter ton activité, attirer des clients, vendre tes produits, tes services ou tes formations, et créer plus d’opportunités.",
     },
     {
-        question: "Puis-je suivre plusieurs colis à la fois ?",
+        question: "Est-ce qu’il y aura un accompagnement ?",
         answer:
-            "Oui. Vous avez une visibilité centralisée sur toutes vos livraisons, avec des statuts et confirmations en temps réel.",
+            "Oui. En plus des formations et de l’outil IA, un accompagnement peut être proposé pour la stratégie de contenu, la recherche d’idées, le community management et la structure des vidéos.",
     },
     {
-        question: "Est-ce sécurisé pour mes données clients ?",
+        question: "Comment je commence ?",
         answer:
-            "Oui. Nous appliquons des bonnes pratiques de sécurité (chiffrement, contrôles d’accès) pour protéger les données et limiter les accès au strict nécessaire.",
-    },
-    {
-        question: "Proposez-vous du stockage ?",
-        answer:
-            "Oui, selon les options et la disponibilité. Nous pouvons proposer des solutions de stockage ponctuelles ou plus régulières selon votre volume.",
-    },
-    {
-        question: "Quels sont vos tarifs ?",
-        answer:
-            "Les tarifs dépendent de la zone et du type de service. Référez-vous à la section Tarifs (Zones 1 à 4) ou contactez-nous pour une offre sur mesure.",
+            "Tu crées ton compte, tu découvres les formations, puis tu utilises l’outil IA pour t’aider à trouver des idées, analyser des vidéos et préparer tes contenus.",
     },
 ];
 
-export const ctaFinalHeading = "Prêt à ne plus perdre de colis ?";
+export const ctaFinalHeading =
+    "Prêt à créer du contenu qui te fait avancer ?";
 
 export const ctaFinalSubheading =
-    "Rejoignez les commerçants de Yaoundé qui ont remplacé WhatsApp par un suivi professionnel. Démarrage en 24h, sans engagement.";
+    "Commence avec AIRGÉ pour apprendre quoi publier, structurer tes vidéos et transformer ta visibilité en clients, ventes, collaborations et opportunités.";
 
-export const ctaFinalPrimaryLabel = "Essayer Gratuitement";
+export const ctaFinalPrimaryLabel = "Commencer avec AIRGÉ";
 
-export const ctaFinalPrimaryHref = whatsappCtaHref;
+export const ctaFinalPrimaryHref = appCtaHref;
 
-export const ctaFinalSecondaryLabel = "Parler à un Agent";
+export const ctaFinalSecondaryLabel = "Voir comment ça marche";
 
-export const ctaFinalSecondaryHref = whatsappCtaHref;
+export const ctaFinalSecondaryHref = "#fonctionnalites";
 
 export const partnerTestimonials = [
     {

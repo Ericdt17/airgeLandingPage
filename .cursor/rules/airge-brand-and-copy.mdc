@@ -1,0 +1,32 @@
+---
+description: Centralize AIRGÉ copy; avoid hardcoding and legacy brand strings
+alwaysApply: true
+---
+
+# AIRGÉ — brand copy and constants
+
+## Single source of truth
+
+- **`src/constants/index.js`**: `brandName`, `navLinks`, hero/problem/solution/impact/pricing/faq/cta/footer, `appCtaHref`, `whatsappCtaHref`.
+- Sections in `src/sections/*` should **import** copy from constants, not duplicate long strings.
+- Nav: `src/components/Nav.jsx` + `src/components/NavBrand.jsx` (text mark **AIRGÉ**, `text-gradient`).
+
+## Centralize in constants
+
+- Headlines, intros, bullet lists, FAQ items, pricing offer, CTA labels/hrefs.
+- Footer columns, social links, support contact when shown.
+
+## Hardcoding
+
+- OK only for short, presentational strings unlikely to change.
+- Never hardcode **LivSight**, delivery/logistics copy, or old domains on the home page.
+
+## Legacy cleanup (when touching branding)
+
+Search and replace or update:
+
+- `LivSight`, `livsight`, `lifsight.com`, `lifsight.com`
+- WhatsApp-first CTAs where the product CTA should be `appCtaHref`
+- `src/components/SEO.jsx` (`siteName`, `baseUrl`), `index.html`, `package.json` name if still template-branded
+
+In summaries for branding work, include a brief **Leftovers check**: terms searched, files touched, any intentional exceptions.
