@@ -3,6 +3,8 @@ import {
     ecosystemAgent,
     ecosystemClient,
     ecosystemDriver,
+    mtnMobileMoneyLogo,
+    orangeMoneyLogo,
 } from "../assets/images";
 import {
     legalConditionsPath,
@@ -374,6 +376,13 @@ export const navLinks = [
 /** Application AIRGÉ (analyse vidéo, formations) */
 export const appCtaHref = "https://app.video-story.com/video";
 
+/** Checkout offre de lancement — prod app ; dev app locale (surcharge : VITE_CHECKOUT_URL) */
+export const checkoutHref =
+    import.meta.env.VITE_CHECKOUT_URL ||
+    (import.meta.env.DEV
+        ? "http://localhost:5173/app/checkout"
+        : "https://app.video-story.com/app/checkout");
+
 export const navCtaLabel = "Démarrer";
 
 export const navCtaHref = appCtaHref;
@@ -709,34 +718,51 @@ export const tarifsCtaSecondary = "Contacter un expert";
 
 export const tarifsCtaSecondaryHref = whatsappCtaHref;
 
-export const pricingHeadline =
-    "Un seul accès pour apprendre et créer plus facilement.";
+export const pricingBadgeLabel = "Offre de lancement";
 
-export const pricingIntro =
-    "Avec AIRGÉ, tu accèdes aux formations pratiques et à l’outil IA pour apprendre à créer du contenu, construire ton audience et transformer ta visibilité en opportunités.";
+export const pricingHeadline = "Offre de lancement AIRGÉ";
+
+export const pricingIntro = "";
 
 export const pricingOffer = {
-    title: "Accès AIRGÉ",
-    subtitle:
-        "Pour ceux qui veulent transformer leur contenu en source de revenus clients, brand deals et ventes.",
+    title: "Inclus :",
+    subtitle: "",
     bullets: [
-        "Des formations pour apprendre à créer du contenu qui attire des clients",
-        "Des leçons sur les hooks, le storytelling et la stratégie de vente",
-        "Des modules pour apprendre à vendre tes produits ou services en ligne",
-        "Des conseils pour décrocher tes premières collaborations rémunérées",
-        "Des scripts et angles de vidéos prêts à publier",
-        "Un outil IA pour analyser des vidéos qui font des ventes",
-        "Des idées de contenu adaptées à ton activité et ton marché",
-        "Des conseils pour construire une audience qui achète",
+        "Formations pratiques AIRGÉ",
+        "Outil IA d’analyse vidéo",
+        "5 crédits bonus",
+        "Guide « Gagne 1 000 000 FCFA/mois » offert",
+        "Accès à vie pour les premiers utilisateurs",
     ],
 };
 
-export const pricingValuePhrase =
-    "AIRGÉ ne te donne pas juste un outil. AIRGÉ t’aide à transformer ce que tu publies en clients, en revenus et en opportunités concrètes.";
+export const pricingOfferBadge = "Lancement";
 
-export const pricingCtaLabel = "Commencer avec AIRGÉ";
+export const pricingPriceLine = "1 000 FCFA";
 
-export const pricingCtaHref = appCtaHref;
+export const pricingPriceSubline = "";
+
+export const pricingPaymentLabel = "Paiement mobile accepté";
+
+export const pricingPaymentMethods = [
+    {
+        name: "MTN Mobile Money",
+        logo: mtnMobileMoneyLogo,
+    },
+    {
+        name: "Orange Money",
+        logo: orangeMoneyLogo,
+    },
+];
+
+export const pricingValuePhrase = "";
+
+export const pricingCtaLabel = "Profiter de l’offre de lancement";
+
+export const pricingCtaFootnote =
+    "Une seule offre pour apprendre, pratiquer et commencer à rentabiliser ton contenu.";
+
+export const pricingCtaHref = checkoutHref;
 
 export const faqHeading = "Questions fréquentes";
 

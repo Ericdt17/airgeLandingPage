@@ -4,6 +4,8 @@ import ecosystemAgent from './ecosystem-agent.png'
 import ecosystemClient from './ecosystem-client.png'
 import ecosystemDriver from './ecosystem-driver.png'
 import tarrifs from './tarrifs.png'
+import mtnMobileMoneyLogo from './mtn-mobile-money.svg'
+import orangeMoneyLogo from './orange-money.svg'
 
 export {
     headerLogo,
@@ -12,4 +14,6 @@ export {
     ecosystemClient,
     ecosystemDriver,
     tarrifs,
+    mtnMobileMoneyLogo,
+    orangeMoneyLogo,
 }
